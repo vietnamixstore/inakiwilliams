@@ -7,70 +7,813 @@
 <title>IÑAKI WILLIAMS — The Lion of Bilbao</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- Be Vietnam Pro: font thiết kế riêng cho tiếng Việt (nội dung). Barlow Condensed có bộ ký tự Việt (tiêu đề). -->
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--red:#c8102e;--deep:#850b20;--ink:#171719;--muted:#77777d;--paper:#f7f5f2;--line:#e7e2df}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif}a{color:inherit;text-decoration:none}.topline{height:7px;background:repeating-linear-gradient(90deg,var(--red) 0 42px,#fff 42px 84px)}
-header{height:76px;padding:0 6vw;display:flex;align-items:center;justify-content:space-between;background:#fff;position:sticky;top:0;z-index:10;border-bottom:1px solid #eee}.brand{font:900 27px "Barlow Condensed";letter-spacing:1px}.brand span{color:var(--red)}nav{display:flex;gap:30px;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase}nav a:hover{color:var(--red)}.menu{display:none;border:0;background:none;font-size:25px}
-.hero{min-height:660px;background:var(--red);position:relative;overflow:hidden;color:#fff;display:grid;grid-template-columns:1fr 1fr;padding:70px 8vw 55px;align-items:center}.hero:before{content:"ATHLETIC";position:absolute;font:900 clamp(130px,24vw,360px)/.8 "Barlow Condensed";letter-spacing:-12px;color:#fff;opacity:.055;left:-2vw;bottom:-30px;white-space:nowrap}.hero-copy{position:relative;z-index:2}.eyebrow{font-size:11px;letter-spacing:3px;font-weight:700;text-transform:uppercase;display:flex;align-items:center;gap:12px}.eyebrow:before{content:"";width:34px;height:2px;background:#fff}.hero h1{font:900 clamp(68px,10vw,145px)/.82 "Barlow Condensed";letter-spacing:-3px;margin:28px 0 22px;text-transform:uppercase}.hero h1 span{display:block;color:transparent;-webkit-text-stroke:1.5px #fff}.hero p{max-width:440px;line-height:1.8;font-size:14px;color:#ffe8ec}.hero-actions{display:flex;gap:12px;margin-top:32px;flex-wrap:wrap}.btn{padding:14px 22px;font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase;border:1px solid #fff;display:inline-block;transition:.2s}.btn.light{background:#fff;color:var(--red)}.btn:hover{transform:translateY(-3px)}.hero-photo{height:540px;position:relative;z-index:1;align-self:end}.hero-photo img{height:100%;width:100%;object-fit:cover;object-position:50% 25%;mix-blend-mode:normal;mask-image:linear-gradient(black 78%,transparent 100%);filter:contrast(1.04)}.hero-number{position:absolute;right:2%;bottom:6%;font:900 170px/.8 "Barlow Condensed";color:#fff;opacity:.16}
-.strip{background:#171719;color:#fff;display:flex;justify-content:space-around;gap:18px;padding:23px 5vw;flex-wrap:wrap}.strip strong{font:800 30px "Barlow Condensed";display:block}.strip span{font-size:9px;letter-spacing:1.6px;color:#bcbcc0;text-transform:uppercase}
-section{padding:100px 8vw}.section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:45px}.kicker{font-size:10px;letter-spacing:2.5px;color:var(--red);font-weight:800;text-transform:uppercase}.section-head h2{font:900 clamp(42px,6vw,76px)/.9 "Barlow Condensed";margin:12px 0 0;text-transform:uppercase}.section-head p{max-width:360px;color:var(--muted);font-size:13px;line-height:1.8}
-.story{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.story-img{height:510px;position:relative}.story-img img{width:100%;height:100%;object-fit:cover}.story-img:after{content:"09";position:absolute;right:-18px;bottom:-25px;background:var(--red);color:#fff;font:900 70px "Barlow Condensed";padding:8px 24px}.story-text h3{font:800 36px/1.05 "Barlow Condensed";margin:12px 0 20px}.story-text p{font-size:14px;line-height:1.95;color:#626268}.quote{font:700 24px/1.25 "Barlow Condensed";border-left:4px solid var(--red);padding:8px 0 8px 20px;margin-top:30px}
-.timeline{background:#fff}.timeline-list{max-width:900px;margin:auto;position:relative}.timeline-list:before{content:"";position:absolute;left:100px;top:8px;bottom:8px;width:2px;background:#eadfe1}.event{display:grid;grid-template-columns:75px 1fr;gap:55px;padding:0 0 38px;position:relative}.event:before{content:"";position:absolute;left:94px;top:5px;width:14px;height:14px;border-radius:50%;background:var(--red);border:4px solid #fff;box-shadow:0 0 0 1px var(--red)}.year{font:800 24px "Barlow Condensed";color:var(--red)}.event h3{font:800 24px "Barlow Condensed";margin:0 0 7px;text-transform:uppercase}.event p{margin:0;color:var(--muted);font-size:13px;line-height:1.8;max-width:650px}
-.duo{display:grid;grid-template-columns:1fr 1fr;gap:18px}.feature{min-height:410px;position:relative;overflow:hidden;background:#222;color:#fff}.feature img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;opacity:.63;transition:.5s}.feature:hover img{transform:scale(1.04)}.feature:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.85),transparent 75%)}.feature-copy{position:absolute;z-index:1;left:30px;right:30px;bottom:28px}.feature-copy small{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#ffc4ce}.feature-copy h3{font:900 42px/.95 "Barlow Condensed";margin:9px 0;text-transform:uppercase}.feature-copy p{font-size:12px;line-height:1.7;max-width:440px;color:#eee}
-.gallery{background:#f0ece8}.gallery-grid{display:grid;grid-template-columns:1.2fr .8fr .8fr;grid-template-rows:230px 230px;gap:12px}.gallery-grid img{width:100%;height:100%;object-fit:cover;filter:saturate(.88);transition:.3s}.gallery-grid img:hover{filter:saturate(1.1);transform:scale(1.01)}.gallery-grid img:first-child{grid-row:span 2}
-.closing{background:var(--red);color:#fff;text-align:center;padding:100px 8vw;position:relative;overflow:hidden}.closing:before{content:"WILLIAMS";position:absolute;font:900 22vw/.8 "Barlow Condensed";color:#fff;opacity:.06;left:0;right:0;top:50%;transform:translateY(-50%)}.closing>*{position:relative}.closing h2{font:900 clamp(50px,9vw,110px)/.85 "Barlow Condensed";margin:15px 0;text-transform:uppercase}.closing p{font-size:13px;color:#ffe4e8;max-width:550px;margin:22px auto;line-height:1.8}
-footer{padding:30px 8vw;background:#171719;color:#aaa;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:10px;line-height:1.8}footer b{color:#fff}footer a{color:#fff;text-decoration:underline}
-@media(max-width:800px){header{padding:0 5vw}nav{display:none}.menu{display:block}.hero{grid-template-columns:1fr;padding:65px 7vw 0;min-height:0}.hero h1{font-size:clamp(75px,17vw,125px)}.hero-photo{height:390px;margin-top:10px}.hero-number{font-size:120px}.strip{justify-content:flex-start}.strip>div{width:42%}section{padding:75px 7vw}.section-head{display:block}.section-head p{margin-top:18px}.story{grid-template-columns:1fr;gap:45px}.story-img{height:400px}.duo{grid-template-columns:1fr}.feature{min-height:360px}.gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:220px 180px 180px}.gallery-grid img:first-child{grid-row:span 2}.gallery-grid img:last-child{grid-column:span 2}}
-@media(max-width:430px){.hero-photo{height:320px}.story-img{height:320px}.event{grid-template-columns:55px 1fr;gap:30px}.timeline-list:before{left:70px}.event:before{left:64px}.gallery-grid{grid-template-rows:170px 140px 140px}}
+:root{
+  --red:#c8102e;--deep:#850b20;--ink:#171719;--muted:#6b6b72;--paper:#f7f5f2;--line:#e7e2df;
+  --head:"Barlow Condensed","Arial Narrow","Roboto Condensed",Impact,sans-serif;
+  --body:"Be Vietnam Pro","Segoe UI",Roboto,Arial,sans-serif;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);overflow-x:hidden;line-height:1.6}
+a{color:inherit;text-decoration:none}
+img{max-width:100%}
+button{font-family:inherit}
+
+/* loader + progress */
+#loader{position:fixed;inset:0;background:var(--red);color:#fff;z-index:100;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;transition:opacity .6s,visibility .6s}
+#loader.hide{opacity:0;visibility:hidden}
+#loader b{font:900 clamp(60px,18vw,120px)/1 var(--head);letter-spacing:2px}
+#loader i{width:160px;height:3px;background:rgba(255,255,255,.3);position:relative;overflow:hidden}
+#loader i:after{content:"";position:absolute;inset:0;background:#fff;transform:translateX(-100%);animation:ld 1s ease forwards}
+@keyframes ld{to{transform:none}}
+#progress{position:fixed;top:0;left:0;height:4px;width:0;background:#fff;z-index:60;box-shadow:0 0 0 1px var(--red)}
+
+.topline{height:7px;background:repeating-linear-gradient(90deg,var(--red) 0 42px,#fff 42px 84px)}
+header{height:72px;padding:0 6vw;display:flex;align-items:center;justify-content:space-between;background:#fff;position:sticky;top:0;z-index:50;border-bottom:1px solid #eee}
+.brand{font:900 27px/1 var(--head);letter-spacing:1px;white-space:nowrap}.brand span{color:var(--red)}
+nav{display:flex;gap:26px;font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase}
+nav a{padding:6px 0;border-bottom:2px solid transparent}
+nav a:hover,nav a.on{color:var(--red);border-color:var(--red)}
+.menu{display:none;border:0;background:none;font-size:28px;line-height:1;width:44px;height:44px;cursor:pointer}
+
+.hero{min-height:660px;background:var(--red);position:relative;overflow:hidden;color:#fff;display:grid;grid-template-columns:1fr 1fr;gap:20px;padding:70px 8vw 0;align-items:center}
+.hero:before{content:"ATHLETIC";position:absolute;font:900 clamp(110px,24vw,360px)/.9 var(--head);letter-spacing:-8px;color:#fff;opacity:.055;left:-2vw;bottom:-20px;white-space:nowrap;pointer-events:none}
+.hero-copy{position:relative;z-index:2;padding-bottom:55px}
+.eyebrow{font-size:11px;letter-spacing:2.5px;font-weight:700;text-transform:uppercase;display:flex;align-items:center;gap:12px}
+.eyebrow:before{content:"";width:34px;height:2px;background:#fff;flex:none}
+.hero h1{font:900 clamp(64px,10vw,145px)/.95 var(--head);letter-spacing:-2px;margin:22px 0;text-transform:uppercase}
+.hero h1 span{display:block;color:transparent;-webkit-text-stroke:1.5px #fff}
+.hero p{max-width:460px;line-height:1.85;font-size:14px;color:#ffe8ec;margin:0}
+.hero-actions{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
+.btn{padding:14px 22px;font-size:12px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;border:1px solid #fff;display:inline-block;transition:.2s;cursor:pointer;background:transparent;color:#fff;line-height:1.3}
+.btn.light{background:#fff;color:var(--red)}
+.btn:hover{transform:translateY(-3px)}
+.hero-photo{height:540px;position:relative;z-index:1;align-self:end}
+.hero-photo img{height:100%;width:100%;object-fit:cover;object-position:50% 25%;-webkit-mask-image:linear-gradient(black 78%,transparent 100%);mask-image:linear-gradient(black 78%,transparent 100%)}
+.hero-number{position:absolute;right:2%;bottom:6%;font:900 170px/.9 var(--head);color:#fff;opacity:.16;pointer-events:none}
+
+.strip{background:#171719;color:#fff;display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding:24px 6vw;text-align:center}
+.strip strong{font:800 32px/1.1 var(--head);display:block}
+.strip span{font-size:10px;letter-spacing:1.2px;color:#bcbcc0;text-transform:uppercase;line-height:1.5;display:block;margin-top:4px}
+
+section{padding:100px 8vw}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:45px}
+.kicker{font-size:11px;letter-spacing:2.2px;color:var(--red);font-weight:700;text-transform:uppercase}
+.section-head h2{font:900 clamp(42px,6vw,76px)/1.02 var(--head);margin:12px 0 0;text-transform:uppercase}
+.section-head p{max-width:360px;color:var(--muted);font-size:13px;line-height:1.85;margin:0}
+
+.story{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.story-img{height:510px;position:relative}
+.story-img img{width:100%;height:100%;object-fit:cover}
+.story-img:after{content:"09";position:absolute;right:-18px;bottom:-25px;background:var(--red);color:#fff;font:900 70px/1 var(--head);padding:8px 24px}
+.story-text h3{font:800 36px/1.15 var(--head);margin:12px 0 20px}
+.story-text p{font-size:14px;line-height:1.95;color:#58585e}
+.quote{font:700 24px/1.4 var(--head);border-left:4px solid var(--red);padding:8px 0 8px 20px;margin-top:30px}
+
+.timeline{background:#fff}
+.timeline-list{max-width:900px;margin:auto;position:relative}
+.timeline-list:before{content:"";position:absolute;left:100px;top:8px;bottom:8px;width:2px;background:#eadfe1}
+.event{display:grid;grid-template-columns:75px 1fr;gap:55px;padding:0 0 38px;position:relative}
+.event:before{content:"";position:absolute;left:94px;top:5px;width:14px;height:14px;border-radius:50%;background:var(--red);border:4px solid #fff;box-shadow:0 0 0 1px var(--red)}
+.year{font:800 24px/1.2 var(--head);color:var(--red)}
+.event h3{font:800 24px/1.2 var(--head);margin:0 0 7px;text-transform:uppercase}
+.event p{margin:0;color:var(--muted);font-size:13px;line-height:1.85;max-width:650px}
+
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.feature{min-height:410px;position:relative;overflow:hidden;background:#222;color:#fff}
+.feature img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;opacity:.63;transition:.5s}
+.feature:hover img{transform:scale(1.04)}
+.feature:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.85),transparent 75%)}
+.feature-copy{position:absolute;z-index:1;left:30px;right:30px;bottom:28px}
+.feature-copy small{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#ffc4ce}
+.feature-copy h3{font:900 42px/1.05 var(--head);margin:9px 0;text-transform:uppercase}
+.feature-copy p{font-size:12px;line-height:1.75;max-width:440px;color:#eee;margin:0}
+
+/* 251 streak */
+.streak{background:#171719;color:#fff}
+.streak .section-head p{color:#b5b5ba}
+.dots{display:grid;grid-template-columns:repeat(auto-fill,minmax(14px,1fr));gap:5px;max-width:1000px}
+.dots i{aspect-ratio:1;background:#2c2c30;border-radius:2px;transition:background .3s,transform .3s}
+.dots i.on{background:var(--red);transform:scale(1.05)}
+.streak-info{display:flex;gap:40px;flex-wrap:wrap;margin-top:34px}
+.streak-info div{font:800 46px/1.1 var(--head);color:#fff}
+.streak-info small{display:block;font:500 11px/1.5 var(--body);letter-spacing:1.2px;text-transform:uppercase;color:#b5b5ba;margin-top:4px}
+
+/* sprint game */
+.game{background:var(--red);color:#fff;text-align:center}
+.game .kicker{color:#ffe0e5}
+.game h2{font:900 clamp(42px,7vw,86px)/1.02 var(--head);margin:12px 0;text-transform:uppercase}
+.game p{max-width:520px;margin:0 auto 26px;font-size:14px;line-height:1.85;color:#ffe4e8}
+.track{max-width:720px;height:46px;margin:0 auto 24px;background:rgba(0,0,0,.22);position:relative;overflow:hidden;border-radius:30px}
+.runner{position:absolute;left:0;top:0;bottom:0;width:0;background:#fff;border-radius:30px;transition:width .08s}
+.track span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font:800 20px var(--head);letter-spacing:1px;mix-blend-mode:difference;color:#fff}
+.stats{display:flex;justify-content:center;gap:34px;margin-bottom:26px;flex-wrap:wrap}
+.stats b{font:900 54px/1 var(--head);display:block}
+.stats small{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#ffd5db}
+#tap{width:min(260px,70vw);height:min(260px,70vw);border-radius:50%;border:0;background:#fff;color:var(--red);font:900 38px/1.1 var(--head);text-transform:uppercase;cursor:pointer;box-shadow:0 12px 0 var(--deep);touch-action:manipulation;user-select:none;-webkit-user-select:none;transition:transform .05s,box-shadow .05s}
+#tap:active{transform:translateY(8px);box-shadow:0 4px 0 var(--deep)}
+#gmsg{margin-top:30px;min-height:24px;font-weight:600;font-size:14px}
+
+/* daily guess (wordle-style) */
+.guess{background:var(--paper)}
+.pg-card{max-width:760px;margin:0 auto;background:#fff;border:2px solid var(--ink);padding:30px;display:grid;grid-template-columns:minmax(150px,200px) 1fr;gap:28px;align-items:center}
+.pg-streak{text-align:center;border-right:2px solid var(--line);padding-right:24px}
+.pg-fire{font-size:34px;display:block;line-height:1}
+.pg-streak b{font:900 clamp(78px,16vw,110px)/1 var(--head);color:var(--red);display:block}
+.pg-streak small{font-size:11px;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);font-weight:600;display:block;line-height:1.5}
+.pg-row{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px solid var(--line);font-size:13px;align-items:center}
+.pg-row span{color:var(--muted)}
+.pg-row b{font-weight:700;text-align:right}
+.pg-btn{margin-top:20px;width:100%;background:var(--red);border-color:var(--red);color:#fff;text-align:center}
+.pg-panel{display:none;max-width:560px;margin:34px auto 0}
+.pg-panel.open{display:block}
+.pg-rules{font-size:13px;line-height:2;color:#58585e;text-align:center;margin:0 0 12px}
+.pg-rules i{font-style:normal;padding:2px 8px;color:#fff;font-weight:700;border-radius:3px;white-space:nowrap}
+.pg-rules .cg{background:#2e9e4f}.pg-rules .cy{background:#e0a912}.pg-rules .cx{background:#4a4a50}
+.pg-hint{text-align:center;font-weight:600;font-size:13px;margin:0 0 16px;min-height:20px;line-height:1.6}
+#pgboard{display:grid;gap:6px;margin:0 auto}
+.pg-grow{display:grid;grid-template-columns:repeat(var(--n),1fr);gap:6px}
+.pg-tile{aspect-ratio:1;border:2px solid #cfc9c5;background:#fff;display:flex;align-items:center;justify-content:center;font:800 min(32px,calc(80vw / var(--n) * .55))/1 var(--head);color:var(--ink);text-transform:uppercase;user-select:none;-webkit-user-select:none}
+.pg-tile.f{border-color:var(--ink)}
+.pg-tile.correct{background:#2e9e4f;border-color:#2e9e4f;color:#fff}
+.pg-tile.present{background:#e0a912;border-color:#e0a912;color:#fff}
+.pg-tile.absent{background:#4a4a50;border-color:#4a4a50;color:#fff}
+.pg-tile.rev{animation:pgflip .56s ease both;animation-delay:calc(var(--i) * .28s)}
+@keyframes pgflip{0%{transform:rotateX(0);background:#fff;border-color:#cfc9c5;color:var(--ink)}49%{transform:rotateX(90deg);background:#fff;border-color:#cfc9c5;color:var(--ink)}50%{transform:rotateX(90deg)}100%{transform:rotateX(0)}}
+.pg-grow.shake{animation:pgshake .4s}
+@keyframes pgshake{0%,100%{transform:none}20%{transform:translateX(-7px)}40%{transform:translateX(7px)}60%{transform:translateX(-5px)}80%{transform:translateX(5px)}}
+.pg-msg{min-height:24px;text-align:center;font-weight:700;font-size:14px;margin-top:14px;color:var(--red)}
+#pgkb{max-width:520px;margin:12px auto 0;display:grid;gap:7px}
+.pg-kr{display:flex;justify-content:center;gap:5px}
+.pg-key{flex:1;max-width:44px;height:52px;border:0;background:#d9d3cf;font:700 14px var(--body);border-radius:5px;cursor:pointer;color:var(--ink);padding:0;touch-action:manipulation}
+.pg-key.w{max-width:68px;flex:1.6;font-size:12px}
+.pg-key.correct{background:#2e9e4f;color:#fff}.pg-key.present{background:#e0a912;color:#fff}.pg-key.absent{background:#4a4a50;color:#fff}
+.pg-end{border:2px solid var(--ink);background:#fff;padding:24px;text-align:center;margin-top:18px}
+.pg-end h3{font:900 clamp(40px,10vw,60px)/1.1 var(--head);margin:6px 0;text-transform:uppercase;color:var(--red)}
+.pg-end p{margin:4px 0 18px;font-size:14px;color:#58585e;line-height:1.7}
+@media(max-width:560px){.pg-card{grid-template-columns:1fr;padding:22px 18px;gap:18px}.pg-streak{border-right:0;border-bottom:2px solid var(--line);padding:0 0 18px}.pg-key{height:48px}}
+@media(max-width:1100px) and (min-width:901px){nav{gap:13px;font-size:11px;letter-spacing:0}}
+
+/* quiz */
+.quiz{background:#fff}
+.quiz-box{max-width:760px;margin:auto;border:2px solid var(--ink);padding:34px}
+.q-top{display:flex;justify-content:space-between;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:700;color:var(--muted);margin-bottom:18px}
+.q-bar{height:4px;background:var(--line);margin-bottom:26px}.q-bar i{display:block;height:100%;width:0;background:var(--red);transition:width .4s}
+#qtext{font:800 clamp(26px,4vw,36px)/1.25 var(--head);margin:0 0 22px}
+.opts{display:grid;gap:10px}
+.opt{text-align:left;padding:15px 18px;border:1.5px solid var(--line);background:#fff;font-size:14px;line-height:1.5;cursor:pointer;transition:.2s;color:var(--ink)}
+.opt:hover:not(:disabled){border-color:var(--red);transform:translateX(4px)}
+.opt.ok{background:#e8f6ec;border-color:#2e9e4f}
+.opt.no{background:#fdeaea;border-color:var(--red)}
+.opt:disabled{cursor:default}
+#qnext{margin-top:22px;background:var(--red);border-color:var(--red);display:none}
+.q-result{text-align:center}.q-result h3{font:900 64px/1.1 var(--head);color:var(--red);margin:0}
+
+/* gallery */
+.gallery{background:#f0ece8}
+.gallery-grid{column-count:3;column-gap:12px}
+.gallery-grid figure{margin:0 0 12px;break-inside:avoid;position:relative;overflow:hidden;cursor:zoom-in;background:#ddd}
+.gallery-grid img{width:100%;display:block;transition:.4s;filter:saturate(.9)}
+.gallery-grid figure:hover img{transform:scale(1.05);filter:saturate(1.1)}
+.gallery-grid figcaption{position:absolute;left:0;bottom:0;background:var(--red);color:#fff;font:800 14px/1 var(--head);letter-spacing:1px;padding:7px 10px;opacity:0;transition:.3s}
+.gallery-grid figure:hover figcaption{opacity:1}
+.hint{margin-top:18px;font-size:12px;color:var(--muted)}
+
+#lb{position:fixed;inset:0;background:rgba(10,10,12,.94);z-index:90;display:none;align-items:center;justify-content:center;padding:20px}
+#lb.open{display:flex}
+#lb img{max-width:100%;max-height:86vh;object-fit:contain;user-select:none;-webkit-user-select:none}
+#lb button{position:absolute;background:rgba(255,255,255,.12);border:0;color:#fff;font-size:26px;width:48px;height:48px;border-radius:50%;cursor:pointer}
+#lb .x{top:16px;right:16px}#lb .pv{left:12px;top:50%;margin-top:-24px}#lb .nx{right:12px;top:50%;margin-top:-24px}
+#lb .cnt{position:absolute;bottom:18px;left:0;right:0;text-align:center;color:#ccc;font-size:12px;letter-spacing:1px}
+
+.closing{background:var(--red);color:#fff;text-align:center;padding:100px 8vw;position:relative;overflow:hidden}
+.closing:before{content:"WILLIAMS";position:absolute;font:900 22vw/1 var(--head);color:#fff;opacity:.06;left:0;right:0;top:50%;transform:translateY(-50%);pointer-events:none}
+.closing>*{position:relative}
+.closing h2{font:900 clamp(50px,9vw,110px)/1 var(--head);margin:15px 0;text-transform:uppercase}
+.closing p{font-size:13px;color:#ffe4e8;max-width:550px;margin:22px auto;line-height:1.85}
+
+footer{padding:30px 8vw;background:#171719;color:#aaa;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:11px;line-height:1.8}
+footer b{color:#fff}footer a{color:#fff;text-decoration:underline}
+
+#top{position:fixed;right:16px;bottom:16px;width:46px;height:46px;border-radius:50%;background:var(--red);color:#fff;border:2px solid #fff;font-size:20px;cursor:pointer;z-index:40;opacity:0;visibility:hidden;transition:.3s}
+#top.show{opacity:1;visibility:visible}
+
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+
+/* ===== Tablet / Mobile ===== */
+@media(max-width:900px){
+  nav{position:fixed;top:79px;left:0;right:0;background:#fff;flex-direction:column;gap:0;padding:8px 6vw 16px;border-bottom:3px solid var(--red);display:none;font-size:14px}
+  nav.open{display:flex}
+  nav a{padding:14px 0;border-bottom:1px solid var(--line)}
+  .menu{display:block}
+  .hero{grid-template-columns:1fr;padding:60px 7vw 0;min-height:0}
+  .hero-copy{padding-bottom:10px}
+  .hero-photo{height:400px}
+  .hero-number{font-size:120px}
+  .strip{grid-template-columns:1fr 1fr;padding:24px 7vw}
+  section{padding:75px 7vw}
+  .section-head{display:block}.section-head p{margin-top:18px;max-width:none}
+  .story{grid-template-columns:1fr;gap:45px}
+  .story-img{height:400px}.story-img:after{right:0}
+  .duo{grid-template-columns:1fr}.feature{min-height:360px}
+  .gallery-grid{column-count:2}
+}
+@media(max-width:480px){
+  header{height:64px}nav{top:71px}
+  .brand{font-size:23px}
+  .hero-photo{height:330px}
+  .hero-actions .btn{flex:1;text-align:center;padding:14px 12px}
+  .story-img{height:330px}
+  .story-text h3{font-size:30px}
+  .event{grid-template-columns:50px 1fr;gap:28px}
+  .timeline-list:before{left:66px}.event:before{left:60px}
+  .year{font-size:20px}
+  .feature-copy{left:20px;right:20px}.feature-copy h3{font-size:36px}
+  .quiz-box{padding:22px 18px}
+  .streak-info{gap:24px}.streak-info div{font-size:38px}
+  .gallery-grid{column-gap:8px}.gallery-grid figure{margin-bottom:8px}
+  footer{flex-direction:column}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
 </style>
+<script>
+/* Ảnh chưa thêm sẽ hiện khung giữ chỗ có ghi tên file cần đặt */
+function ph(el){
+  if(el.dataset.f)return;el.dataset.f=1;
+  var n=(el.getAttribute('src')||'').split('/').pop();
+  var s='<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000"><rect width="100%" height="100%" fill="#850b20"/><text x="50%" y="50%" fill="#fff" font-family="Arial" font-size="44" font-weight="700" text-anchor="middle">'+n+'</text><text x="50%" y="58%" fill="#ffb3c0" font-family="Arial" font-size="26" text-anchor="middle">chưa có ảnh</text></svg>';
+  el.src='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(s);
+}
+</script>
 </head>
 <body>
+<div id="loader"><b>IW·09</b><i></i></div>
+<div id="progress"></div>
 <div class="topline"></div>
-<header><a class="brand" href="#">THE <span>WILLIAMS</span> FILE</a><nav><a href="#story">Câu chuyện</a><a href="#career">Sự nghiệp</a><a href="#legacy">Dấu ấn</a><a href="#gallery">Thư viện ảnh</a></nav><button class="menu" onclick="document.querySelector('nav').style.display=document.querySelector('nav').style.display==='flex'?'none':'flex'" aria-label="Mở menu">☰</button></header>
+<header>
+  <a class="brand" href="#">THE <span>WILLIAMS</span> FILE</a>
+  <nav id="nav">
+    <a href="#story">Câu chuyện</a><a href="#career">Sự nghiệp</a><a href="#legacy">Dấu ấn</a><a href="#streak">251</a><a href="#game">Thử tốc độ</a><a href="#guess">Đoán tên</a><a href="#quiz">Quiz</a><a href="#gallery">Ảnh</a>
+  </nav>
+  <button class="menu" id="menu" aria-label="Mở menu" aria-expanded="false">☰</button>
+</header>
+
 <main>
-<section class="hero">
- <div class="hero-copy"><div class="eyebrow">The Lion of Bilbao · Since 1994</div><h1>IÑAKI <span>WILLIAMS</span></h1><p>Tốc độ, sức mạnh và lòng trung thành. Hành trình của chàng trai Bilbao trở thành một trong những biểu tượng hiện đại của Athletic Club.</p><div class="hero-actions"><a class="btn light" href="#career">Khám phá hành trình ↓</a><a class="btn" href="#gallery">Xem thư viện ảnh</a></div></div>
- <div class="hero-photo"><img src="https://iffhs.com/storage/img/posts/IMG_5999.JPG" alt="Iñaki Williams thi đấu trong màu áo Athletic Club"><div class="hero-number">09</div></div>
+<section class="hero" style="padding-bottom:0">
+  <div class="hero-copy">
+    <div class="eyebrow">The Lion of Bilbao · Since 1994</div>
+    <h1>IÑAKI <span>WILLIAMS</span></h1>
+    <p>Tốc độ, sức mạnh và lòng trung thành. Hành trình của chàng trai Bilbao trở thành một trong những biểu tượng hiện đại của Athletic Club.</p>
+    <div class="hero-actions"><a class="btn light" href="#career">Khám phá hành trình ↓</a><a class="btn" href="#game">Thử tốc độ ⚡</a></div>
+  </div>
+  <div class="hero-photo"><img src="inaki1.jpg" alt="Iñaki Williams thi đấu trong màu áo Athletic Club" onerror="ph(this)"><div class="hero-number">09</div></div>
 </section>
+
 <div class="strip">
- <div><strong>15.06.1994</strong><span>Ngày sinh · Bilbao</span></div><div><strong>1.86 M</strong><span>Chiều cao</span></div><div><strong>522</strong><span>Trận chính thức*</span></div><div><strong>251</strong><span>Trận LaLiga liên tiếp</span></div>
+  <div><strong id="age">32</strong><span>Tuổi · Sinh 15.06.1994 tại Bilbao</span></div>
+  <div><strong>1.86 M</strong><span>Chiều cao</span></div>
+  <div><strong data-count="522">522</strong><span>Trận chính thức*</span></div>
+  <div><strong data-count="251">251</strong><span>Trận LaLiga liên tiếp</span></div>
 </div>
+
 <section id="story">
- <div class="section-head"><div><div class="kicker">01 / The beginning</div><h2>Một hành trình<br>đậm chất Bilbao</h2></div><p>Sinh ra tại Bilbao trong một gia đình có gốc Ghana, Iñaki Williams chọn biến nơi mình lớn lên thành mái nhà bóng đá — và Athletic Club thành màu áo của cả sự nghiệp.</p></div>
- <div class="story"><div class="story-img"><img src="https://cdn.athletic-club.eus/uploads/2021/09/i%C3%B1aki-300.jpg" alt="Iñaki Williams trong màu áo Athletic Club"></div><div class="story-text"><div class="kicker">Bilbao · Basque Country</div><h3>Từ những bước chạy đầu tiên đến biểu tượng của San Mamés</h3><p>Iñaki Williams Arthuer sinh ngày 15 tháng 6 năm 1994 tại Bilbao, Tây Ban Nha. Lớn lên trong hệ thống đào tạo bóng đá địa phương, anh từng bước đi qua Basconia và Bilbao Athletic trước khi được trao cơ hội ở đội một.</p><p>Điểm mạnh nổi bật của Iñaki là tốc độ bứt phá, thể chất mạnh mẽ và khả năng chơi ở cả vị trí tiền đạo lẫn tiền đạo cánh. Nhưng điều khiến anh trở nên đặc biệt với người hâm mộ Athletic còn là sự bền bỉ và gắn bó lâu dài với CLB.</p><div class="quote">“Không chỉ là một cầu thủ. Iñaki là một phần của câu chuyện Athletic Club.”</div></div></div>
+  <div class="section-head rv"><div><div class="kicker">01 / The beginning</div><h2>Một hành trình<br>đậm chất Bilbao</h2></div><p>Sinh ra tại Bilbao trong một gia đình có gốc Ghana, Iñaki Williams chọn biến nơi mình lớn lên thành mái nhà bóng đá — và Athletic Club thành màu áo của cả sự nghiệp.</p></div>
+  <div class="story rv">
+    <div class="story-img"><img src="inaki2.jpg" alt="Iñaki Williams trong màu áo Athletic Club" onerror="ph(this)"></div>
+    <div class="story-text">
+      <div class="kicker">Bilbao · Basque Country</div>
+      <h3>Từ những bước chạy đầu tiên đến biểu tượng của San Mamés</h3>
+      <p>Iñaki Williams Arthuer sinh ngày 15 tháng 6 năm 1994 tại Bilbao, Tây Ban Nha. Lớn lên trong hệ thống đào tạo bóng đá địa phương, anh từng bước đi qua Basconia và Bilbao Athletic trước khi được trao cơ hội ở đội một.</p>
+      <p>Điểm mạnh nổi bật của Iñaki là tốc độ bứt phá, thể chất mạnh mẽ và khả năng chơi ở cả vị trí tiền đạo lẫn tiền đạo cánh. Nhưng điều khiến anh trở nên đặc biệt với người hâm mộ Athletic còn là sự bền bỉ và gắn bó lâu dài với CLB.</p>
+      <div class="quote">“Không chỉ là một cầu thủ. Iñaki là một phần của câu chuyện Athletic Club.”</div>
+    </div>
+  </div>
 </section>
+
 <section class="timeline" id="career">
- <div class="section-head"><div><div class="kicker">02 / Career timeline</div><h2>Những cột mốc<br>không thể quên</h2></div><p>Từ trận ra mắt năm 2014 đến chiếc cúp Copa del Rey và những cột mốc lịch sử trong màu áo đỏ-trắng.</p></div>
- <div class="timeline-list">
-  <article class="event"><div class="year">2013</div><div><h3>Bước chân vào bóng đá chuyên nghiệp</h3><p>Thi đấu cho Basconia và Bilbao Athletic, ghi dấu ấn ở các cấp độ trẻ trước khi tiến gần hơn tới đội một.</p></div></article>
-  <article class="event"><div class="year">2014</div><div><h3>Ra mắt đội một Athletic Club</h3><p>Ngày 6/12/2014, Iñaki có trận ra mắt LaLiga trước Córdoba CF tại sân San Mamés — khởi đầu cho hành trình hơn một thập kỷ gắn bó với đội bóng.</p></div></article>
-  <article class="event"><div class="year">2015</div><div><h3>Danh hiệu đầu tiên: Supercopa de España</h3><p>Athletic Club đánh bại Barcelona để giành Siêu cúp Tây Ban Nha. Iñaki bắt đầu khẳng định vị trí trong đội hình.</p></div></article>
-  <article class="event"><div class="year">2016–23</div><div><h3>Kỷ lục 251 trận liên tiếp</h3><p>Chuỗi 251 lần ra sân liên tiếp tại LaLiga từ tháng 4/2016 đến tháng 1/2023 trở thành kỷ lục của giải đấu — minh chứng cho sự bền bỉ phi thường.</p></div></article>
-  <article class="event"><div class="year">2021</div><div><h3>Cú đánh đầu định đoạt trước Barcelona</h3><p>Iñaki ghi bàn thắng trong hiệp phụ ở chung kết Supercopa 2021, giúp Athletic Club vượt qua Barcelona và nâng cao chiếc cúp.</p></div></article>
-  <article class="event"><div class="year">2022</div><div><h3>Chọn khoác áo đội tuyển Ghana</h3><p>Sau một lần xuất hiện trong màu áo Tây Ban Nha ở trận giao hữu, Iñaki quyết định đại diện cho Ghana — quê hương của cha mẹ anh — ở cấp độ quốc tế.</p></div></article>
-  <article class="event"><div class="year">2024</div><div><h3>Chức vô địch Copa del Rey</h3><p>Athletic Club giành Copa del Rey 2023/24, chấm dứt 40 năm chờ đợi danh hiệu này. Iñaki là một trong những thủ lĩnh của tập thể làm nên lịch sử.</p></div></article>
-  <article class="event"><div class="year">2026</div><div><h3>Cột mốc 500+ trận và lời chia tay Ghana</h3><p>Tháng 3/2026, anh cán mốc 500 trận chính thức cho Athletic. Tháng 9/2026, Iñaki tuyên bố khép lại sự nghiệp đội tuyển Ghana sau 28 lần ra sân và 2 bàn thắng.</p></div></article>
- </div>
+  <div class="section-head rv"><div><div class="kicker">02 / Career timeline</div><h2>Những cột mốc<br>không thể quên</h2></div><p>Từ trận ra mắt năm 2014 đến chiếc cúp Copa del Rey và những cột mốc lịch sử trong màu áo đỏ-trắng.</p></div>
+  <div class="timeline-list">
+    <article class="event rv"><div class="year">2013</div><div><h3>Bước chân vào bóng đá chuyên nghiệp</h3><p>Thi đấu cho Basconia và Bilbao Athletic, ghi dấu ấn ở các cấp độ trẻ trước khi tiến gần hơn tới đội một.</p></div></article>
+    <article class="event rv"><div class="year">2014</div><div><h3>Ra mắt đội một Athletic Club</h3><p>Ngày 6/12/2014, Iñaki có trận ra mắt LaLiga trước Córdoba CF tại sân San Mamés — khởi đầu cho hành trình hơn một thập kỷ gắn bó với đội bóng.</p></div></article>
+    <article class="event rv"><div class="year">2015</div><div><h3>Danh hiệu đầu tiên: Supercopa de España</h3><p>Athletic Club đánh bại Barcelona để giành Siêu cúp Tây Ban Nha. Iñaki bắt đầu khẳng định vị trí trong đội hình.</p></div></article>
+    <article class="event rv"><div class="year">2016–23</div><div><h3>Kỷ lục 251 trận liên tiếp</h3><p>Chuỗi 251 lần ra sân liên tiếp tại LaLiga từ tháng 4/2016 đến tháng 1/2023 trở thành kỷ lục của giải đấu — minh chứng cho sự bền bỉ phi thường.</p></div></article>
+    <article class="event rv"><div class="year">2021</div><div><h3>Cú đánh đầu định đoạt trước Barcelona</h3><p>Iñaki ghi bàn thắng trong hiệp phụ ở chung kết Supercopa 2021, giúp Athletic Club vượt qua Barcelona và nâng cao chiếc cúp.</p></div></article>
+    <article class="event rv"><div class="year">2022</div><div><h3>Chọn khoác áo đội tuyển Ghana</h3><p>Sau một lần xuất hiện trong màu áo Tây Ban Nha ở trận giao hữu, Iñaki quyết định đại diện cho Ghana — quê hương của cha mẹ anh — ở cấp độ quốc tế.</p></div></article>
+    <article class="event rv"><div class="year">2024</div><div><h3>Chức vô địch Copa del Rey</h3><p>Athletic Club giành Copa del Rey 2023/24, chấm dứt 40 năm chờ đợi danh hiệu này. Iñaki là một trong những thủ lĩnh của tập thể làm nên lịch sử.</p></div></article>
+    <article class="event rv"><div class="year">2026</div><div><h3>Cột mốc 500+ trận và lời chia tay Ghana</h3><p>Tháng 3/2026, anh cán mốc 500 trận chính thức cho Athletic. Tháng 9/2026, Iñaki tuyên bố khép lại sự nghiệp đội tuyển Ghana sau 28 lần ra sân và 2 bàn thắng.</p></div></article>
+  </div>
 </section>
+
 <section id="legacy">
- <div class="section-head"><div><div class="kicker">03 / Beyond the pitch</div><h2>Di sản của<br>một chiến binh</h2></div><p>Những dấu ấn làm nên Iñaki Williams: lòng trung thành với CLB, bản lĩnh ở các trận cầu lớn và niềm tự hào về nguồn cội.</p></div>
- <div class="duo">
-  <article class="feature"><img src="https://img.matchafrique.com/files/img/2023/08/Inaki-Williams-joueur-cle-de-lAthletic-Bilbao-en-Liga_thumbnail-809x1024.jpg" alt="Iñaki Williams bứt tốc cùng Athletic Club"><div class="feature-copy"><small>Endurance · Consistency</small><h3>251 trận.<br>Một kỷ lục.</h3><p>Chuỗi ra sân liên tiếp dài nhất lịch sử LaLiga: 251 trận, kéo dài gần bảy năm.</p></div></article>
-  <article class="feature"><img src="https://cdn.athletic-club.eus/uploads/2022/09/20220906_williams_ghana.jpg" alt="Iñaki Williams trong màu áo Ghana"><div class="feature-copy"><small>Roots · Identity</small><h3>Hai quê hương.<br>Một niềm tự hào.</h3><p>Sinh ra tại Bilbao, mang trong mình nguồn cội Ghana và từng đại diện Black Stars trên sân khấu bóng đá thế giới.</p></div></article>
- </div>
+  <div class="section-head rv"><div><div class="kicker">03 / Beyond the pitch</div><h2>Di sản của<br>một chiến binh</h2></div><p>Những dấu ấn làm nên Iñaki Williams: lòng trung thành với CLB, bản lĩnh ở các trận cầu lớn và niềm tự hào về nguồn cội.</p></div>
+  <div class="duo rv">
+    <article class="feature"><img src="inaki3.jpg" alt="Iñaki Williams bứt tốc cùng Athletic Club" onerror="ph(this)"><div class="feature-copy"><small>Endurance · Consistency</small><h3>251 trận.<br>Một kỷ lục.</h3><p>Chuỗi ra sân liên tiếp dài nhất lịch sử LaLiga: 251 trận, kéo dài gần bảy năm.</p></div></article>
+    <article class="feature"><img src="inaki4.jpg" alt="Iñaki Williams trong màu áo Ghana" onerror="ph(this)"><div class="feature-copy"><small>Roots · Identity</small><h3>Hai quê hương.<br>Một niềm tự hào.</h3><p>Sinh ra tại Bilbao, mang trong mình nguồn cội Ghana và từng đại diện Black Stars trên sân khấu bóng đá thế giới.</p></div></article>
+  </div>
 </section>
+
+<section class="streak" id="streak">
+  <div class="section-head rv"><div><div class="kicker">04 / Iron man</div><h2>251 trận<br>không vắng mặt</h2></div><p>Mỗi ô vuông là một trận LaLiga liên tiếp. Cuộn tới đây để xem chuỗi kỷ lục được thắp sáng từng trận một.</p></div>
+  <div class="dots" id="dots"></div>
+  <div class="streak-info">
+    <div id="sCount">0<small>Trận đã thắp sáng</small></div>
+    <div id="sDays">0<small>Ngày kể từ trận ra mắt 06.12.2014</small></div>
+  </div>
+</section>
+
+<section class="game" id="game">
+  <div class="kicker">05 / Sprint challenge</div>
+  <h2>Chạy nhanh như Iñaki</h2>
+  <p>Bấm (hoặc chạm) liên tục vào nút trong 10 giây để chạy hết đường đua 100 bước. Kỷ lục của bạn được lưu lại trên thiết bị.</p>
+  <div class="track"><div class="runner" id="runner"></div><span id="tpos">0 / 100</span></div>
+  <div class="stats"><div><b id="gtime">10.0</b><small>Giây còn lại</small></div><div><b id="gtaps">0</b><small>Bước</small></div><div><b id="gbest">0</b><small>Kỷ lục</small></div></div>
+  <button id="tap" type="button">BẤM<br>ĐỂ CHẠY</button>
+  <div id="gmsg"></div>
+</section>
+
+<section class="guess" id="guess">
+  <div class="section-head rv"><div><div class="kicker">06 / Daily guess</div><h2>Đoán cầu thủ<br>mỗi ngày</h2></div><p>Mỗi ngày có một cầu thủ bí mật mới, đổi vào 0h. Bạn có 6 lượt để đoán tên. Đoán đúng liên tiếp để nối dài chuỗi ngày.</p></div>
+  <div class="pg-card rv" id="pgcard">
+    <div class="pg-streak"><span class="pg-fire">🔥</span><b id="pgstreak">0</b><small>Ngày đoán đúng liên tiếp</small></div>
+    <div class="pg-info">
+      <div class="pg-row"><span>Kỷ lục chuỗi</span><b id="pgbest">0 ngày</b></div>
+      <div class="pg-row"><span>Hôm nay</span><b id="pgstatus">Chưa chơi</b></div>
+      <div class="pg-row"><span>Cầu thủ mới sau</span><b id="pgcd">--:--:--</b></div>
+      <button class="btn pg-btn" id="pgbtn" type="button">Vào chơi</button>
+    </div>
+  </div>
+  <div class="pg-panel" id="pgpanel">
+    <p class="pg-rules"><b>Cách chơi:</b> gõ họ cầu thủ (không dấu), đủ số chữ cái rồi bấm Enter. <i class="cg">Xanh lá</i> đúng chữ, đúng vị trí · <i class="cy">Vàng</i> có chữ nhưng sai vị trí · <i class="cx">Xám</i> không có chữ này.</p>
+    <div class="pg-hint" id="pghint"></div>
+    <div id="pgboard"></div>
+    <div class="pg-msg" id="pgmsg" role="status" aria-live="polite"></div>
+    <div id="pgend"></div>
+    <div id="pgkb"></div>
+  </div>
+</section>
+
+<section class="quiz" id="quiz">
+  <div class="section-head rv"><div><div class="kicker">07 / Fan quiz</div><h2>Bạn hiểu Iñaki<br>đến đâu?</h2></div><p>Kho 54 câu hỏi về Iñaki và Athletic Club. Mỗi lượt chọn ngẫu nhiên 10 câu, đáp án được xáo trộn. Trả lời đúng để nhận danh hiệu fan.</p></div>
+  <div class="quiz-box" id="qbox"></div>
+</section>
+
 <section class="gallery" id="gallery">
- <div class="section-head"><div><div class="kicker">04 / Photo archive</div><h2>Khoảnh khắc<br>trên sân cỏ</h2></div><p>Màu áo đỏ-trắng, những pha bứt tốc và tinh thần chiến đấu tại San Mamés.</p></div>
- <div class="gallery-grid">
-  <img src="https://iffhs.com/storage/img/posts/IMG_5999.JPG" alt="Iñaki Williams dẫn bóng">
-  <img src="https://img.asmedia.epimg.net/resizer/v2/TFBDYQG5DZOXXDMEI4LSBLKXVM.jpg?auth=0034ca4489b76d2741e8745b5414078c263b5282257fb0d509d002439df4757d&height=1200&smart=true&width=1200" alt="Iñaki Williams trong màu áo Athletic">
-  <img src="https://cdn.athletic-club.eus/uploads/2021/09/i%C3%B1aki-300.jpg" alt="Iñaki Williams ăn mừng">
-  <img src="https://img.matchafrique.com/files/img/2023/08/Inaki-Williams-joueur-cle-de-lAthletic-Bilbao-en-Liga_thumbnail-809x1024.jpg" alt="Iñaki Williams thi đấu">
-  <img src="https://cdn.athletic-club.eus/uploads/2022/09/20220906_williams_ghana.jpg" alt="Iñaki Williams đại diện Ghana">
- </div>
+  <div class="section-head rv"><div><div class="kicker">08 / Photo archive</div><h2>Khoảnh khắc<br>trên sân cỏ</h2></div><p>Màu áo đỏ-trắng, những pha bứt tốc và tinh thần chiến đấu tại San Mamés. Chạm vào ảnh để xem lớn, vuốt để chuyển ảnh.</p></div>
+  <div class="gallery-grid" id="gg"></div>
+  <p class="hint">Thư viện tự nhận ảnh inaki5.jpg, inaki6.jpg, inaki7.jpg… theo thứ tự (dừng ở số đầu tiên bị thiếu).</p>
 </section>
-<section class="closing"><div class="kicker" style="color:#ffe0e5">The Lion of Bilbao</div><h2>Once a Lion,<br>Always a Lion.</h2><p>Một hành trình được viết bằng tốc độ, sự kiên trì và tình yêu dành cho màu áo đỏ-trắng. Câu chuyện của Iñaki Williams vẫn tiếp tục tại Bilbao.</p><a class="btn light" href="https://www.athletic-club.eus/en/players/inaki-williams-arthuer/" target="_blank" rel="noopener">Hồ sơ chính thức ↗</a></section>
+
+<section class="closing">
+  <div class="kicker" style="color:#ffe0e5">The Lion of Bilbao</div>
+  <h2>Once a Lion,<br>Always a Lion.</h2>
+  <p>Một hành trình được viết bằng tốc độ, sự kiên trì và tình yêu dành cho màu áo đỏ-trắng. Câu chuyện của Iñaki Williams vẫn tiếp tục tại Bilbao.</p>
+  <a class="btn light" href="https://www.athletic-club.eus/en/players/inaki-williams-arthuer/" target="_blank" rel="noopener">Hồ sơ chính thức ↗</a>
+</section>
 </main>
-<footer><div><b>THE WILLIAMS FILE</b><br>Fan-made tribute website · Không thuộc Athletic Club.</div><div>*Số trận theo hồ sơ Athletic Club được truy cập tháng 11/2026; thống kê có thể tiếp tục thay đổi.<br>Ảnh: IFFHS, Athletic Club, AS/MatchAfrique. Vui lòng kiểm tra điều khoản sử dụng trước khi tái xuất bản.</div><div><a href="https://www.athletic-club.eus/en/players/inaki-williams-arthuer/" target="_blank">Athletic Club</a> · <a href="https://www.laliga.com/en-GB/player/williams" target="_blank">LaLiga</a></div></footer>
-</body></html>
+
+<footer>
+  <div><b>THE WILLIAMS FILE</b><br>Fan-made tribute website · Không thuộc Athletic Club.</div>
+  <div>*Số trận theo hồ sơ Athletic Club được truy cập tháng 11/2026; thống kê có thể tiếp tục thay đổi.</div>
+  <div><a href="https://www.athletic-club.eus/en/players/inaki-williams-arthuer/" target="_blank" rel="noopener">Athletic Club</a> · <a href="https://www.laliga.com/en-GB/player/williams" target="_blank" rel="noopener">LaLiga</a></div>
+</footer>
+
+<button id="top" aria-label="Lên đầu trang">↑</button>
+<div id="lb" aria-hidden="true"><button class="x" aria-label="Đóng">✕</button><button class="pv" aria-label="Ảnh trước">‹</button><img alt=""><button class="nx" aria-label="Ảnh sau">›</button><div class="cnt"></div></div>
+
+<script>
+(function(){
+var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){return [].slice.call((r||document).querySelectorAll(s))};
+
+/* loader */
+window.addEventListener('load',function(){setTimeout(function(){$('#loader').classList.add('hide')},700)});
+setTimeout(function(){$('#loader').classList.add('hide')},2500);
+
+/* menu */
+var nav=$('#nav'),mb=$('#menu');
+mb.onclick=function(){var o=nav.classList.toggle('open');mb.setAttribute('aria-expanded',o);mb.textContent=o?'✕':'☰'};
+$$('#nav a').forEach(function(a){a.onclick=function(){nav.classList.remove('open');mb.textContent='☰';mb.setAttribute('aria-expanded',false)}});
+
+/* progress, back-to-top, active link */
+var secs=$$('main section[id]'),links=$$('#nav a'),topb=$('#top');
+function onScroll(){
+  var h=document.documentElement,max=h.scrollHeight-h.clientHeight;
+  $('#progress').style.width=(max>0?h.scrollTop/max*100:0)+'%';
+  topb.classList.toggle('show',h.scrollTop>600);
+  var cur='';secs.forEach(function(s){if(s.getBoundingClientRect().top<140)cur=s.id});
+  links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
+}
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+topb.onclick=function(){scrollTo({top:0,behavior:'smooth'})};
+
+/* age (live) */
+var b=new Date(1994,5,15),t=new Date(),age=t.getFullYear()-b.getFullYear();
+if(t<new Date(t.getFullYear(),5,15))age--;$('#age').textContent=age;
+
+/* reveal + counters */
+function count(el,to,dur){var s=null;function f(ts){if(!s)s=ts;var p=Math.min((ts-s)/dur,1);el.textContent=Math.round(to*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f)}requestAnimationFrame(f)}
+var io=('IntersectionObserver' in window)?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12}):null;
+$$('.rv').forEach(function(el){io?io.observe(el):el.classList.add('in')});
+var co=io&&new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){count(e.target,+e.target.dataset.count,1400);co.unobserve(e.target)}})},{threshold:.6});
+$$('[data-count]').forEach(function(el){co&&co.observe(el)});
+
+/* 251 streak */
+var dots=$('#dots'),d=[];
+for(var i=0;i<251;i++){var x=document.createElement('i');dots.appendChild(x);d.push(x)}
+var days=Math.floor((Date.now()-new Date(2014,11,6))/864e5);
+function setS(n){$('#sCount').firstChild.nodeValue=n}
+var sdone=false;
+function runStreak(){
+  var n=0,iv=setInterval(function(){
+    for(var k=0;k<3&&n<251;k++){d[n++].classList.add('on')}
+    $('#sCount').firstChild.nodeValue=n;
+    if(n>=251){clearInterval(iv);count($('#sDays').firstChild.parentNode&&{set textContent(v){$('#sDays').firstChild.nodeValue=v}},days,1500)}
+  },24);
+}
+var so=io&&new IntersectionObserver(function(es){if(es[0].isIntersecting&&!sdone){sdone=true;runStreak();so.disconnect()}},{threshold:.3});
+so?so.observe(dots):(function(){d.forEach(function(x){x.classList.add('on')});$('#sCount').firstChild.nodeValue=251;$('#sDays').firstChild.nodeValue=days})();
+
+/* sprint game */
+var tap=$('#tap'),taps=0,left=10,run=false,timer=null,best=0,GOAL=100;
+try{best=+localStorage.getItem('iw_best')||0}catch(e){}
+$('#gbest').textContent=best;
+function render(){$('#gtaps').textContent=taps;$('#gtime').textContent=left.toFixed(1);var p=Math.min(taps/GOAL,1)*100;$('#runner').style.width=p+'%';$('#tpos').textContent=Math.min(taps,GOAL)+' / '+GOAL}
+function end(){
+  run=false;clearInterval(timer);tap.innerHTML='CHẠY<br>LẠI';
+  var m;if(taps>=GOAL)m='🏆 Về đích! Nhanh như Sư tử Bilbao.';else if(taps>=80)m='⚡ Cực nhanh! Suýt nữa là về đích.';else if(taps>=55)m='👍 Khá lắm, tiền đạo cánh chuẩn.';else m='🐢 Cần khởi động thêm, thử lại nhé!';
+  if(taps>best){best=taps;$('#gbest').textContent=best;m+=' Kỷ lục mới!';try{localStorage.setItem('iw_best',best)}catch(e){}}
+  $('#gmsg').textContent=m;
+}
+tap.addEventListener('pointerdown',function(e){
+  e.preventDefault();
+  if(!run){taps=0;left=10;run=true;$('#gmsg').textContent='';var st=Date.now();timer=setInterval(function(){left=Math.max(0,10-(Date.now()-st)/1000);render();if(left<=0)end()},50)}
+  taps++;if(taps>=GOAL){taps=GOAL;render();end();return}
+  tap.innerHTML='CHẠY!<br>'+taps;render();
+});
+tap.addEventListener('keydown',function(e){if(e.key===' '||e.key==='Enter'){e.preventDefault();tap.dispatchEvent(new Event('pointerdown'))}});
+render();
+
+/* quiz: 54 câu, mỗi lượt chọn ngẫu nhiên 10 câu, xáo trộn đáp án */
+(function(){
+/* [câu hỏi, ĐÁP ÁN ĐÚNG, sai 1, sai 2, sai 3] */
+var QB=[
+["Iñaki Williams sinh ra ở thành phố nào?","Bilbao","Madrid","Barcelona","Accra"],
+["Iñaki Williams sinh năm nào?","1994","1992","1996","1998"],
+["Iñaki Williams sinh vào tháng mấy?","Tháng 6","Tháng 3","Tháng 9","Tháng 12"],
+["Tên đầy đủ của Iñaki Williams là gì?","Iñaki Williams Arthuer","Iñaki Williams Mensah","Iñaki Arthuer Boateng","Iñaki Williams Owusu"],
+["Gia đình Iñaki có nguồn gốc từ quốc gia nào?","Ghana","Nigeria","Maroc","Senegal"],
+["Thủ đô của Ghana là thành phố nào?","Accra","Lagos","Dakar","Abuja"],
+["Câu lạc bộ gắn bó nhất với sự nghiệp của Iñaki là?","Athletic Club","Real Sociedad","Osasuna","Sevilla"],
+["Sân nhà của Athletic Club tên là gì?","San Mamés","Camp Nou","Anoeta","Mestalla"],
+["Biệt danh của sân San Mamés là gì?","La Catedral","La Bombonera","El Madrigal","Anfield"],
+["Athletic Club được thành lập năm nào?","1898","1902","1920","1950"],
+["Màu áo truyền thống của Athletic Club là gì?","Sọc đỏ trắng","Xanh dương trắng","Vàng đen","Xanh lá trắng"],
+["Cầu thủ Athletic Club thường được gọi bằng biệt danh nào?","Los Leones (Những chú sư tử)","Los Toros","Las Águilas","Los Lobos"],
+["Athletic Club nổi tiếng với chính sách tuyển quân nào?","Ưu tiên cầu thủ gắn với xứ Basque","Chỉ mua cầu thủ Nam Mỹ","Chỉ dùng cầu thủ dưới 21 tuổi","Không có đội trẻ"],
+["Cùng Real Madrid và Barcelona, Athletic Club nổi tiếng vì điều gì?","Chưa từng xuống hạng khỏi LaLiga","Từng vô địch Champions League 10 lần","Có sân vận động lớn nhất châu Âu","Chưa từng thua trên sân nhà"],
+["Khu tập luyện của Athletic Club tên là gì?","Lezama","Valdebebas","Ciutat Esportiva","Zubieta"],
+["Trận ra mắt LaLiga của Iñaki là gặp đội nào?","Córdoba","Barcelona","Sevilla","Valencia"],
+["Iñaki ra mắt LaLiga vào ngày nào?","6/12/2014","15/6/2014","1/9/2015","20/1/2016"],
+["Khi ra mắt LaLiga (tháng 12/2014), Iñaki bao nhiêu tuổi?","20","17","23","25"],
+["Kỷ lục LaLiga của Iñaki là bao nhiêu trận ra sân liên tiếp?","251","151","201","301"],
+["Chuỗi ra sân liên tiếp của Iñaki bắt đầu vào thời điểm nào?","Tháng 4/2016","Tháng 8/2014","Tháng 1/2018","Tháng 9/2019"],
+["Chuỗi kỷ lục của Iñaki kết thúc vào thời điểm nào?","Tháng 1/2023","Tháng 5/2020","Tháng 6/2021","Tháng 12/2024"],
+["Chuỗi 251 trận của Iñaki kéo dài khoảng bao lâu?","Gần 7 năm","Khoảng 2 năm","Khoảng 4 năm","Hơn 10 năm"],
+["Trước Iñaki, kỷ lục ra sân liên tiếp ở LaLiga là bao nhiêu trận?","202","150","180","230"],
+["Danh hiệu đầu tiên của Iñaki cùng Athletic là gì?","Supercopa de España 2015","Copa del Rey 2024","Europa League","LaLiga"],
+["Ở Supercopa 2015, Athletic đánh bại đội nào?","Barcelona","Real Madrid","Atlético Madrid","Sevilla"],
+["Athletic đánh bại đối thủ nào ở chung kết Supercopa 2021?","Barcelona","Real Madrid","Valencia","Villarreal"],
+["Athletic giành Copa del Rey 2024 sau bao nhiêu năm chờ đợi?","40 năm","10 năm","25 năm","60 năm"],
+["Đối thủ của Athletic ở chung kết Copa del Rey 2024 là?","Mallorca","Real Madrid","Sevilla","Osasuna"],
+["Chung kết Copa del Rey 2024 được phân định bằng cách nào?","Loạt đá luân lưu","Bàn thắng vàng","Đá lại trận đấu","Hiệp phụ thứ hai"],
+["Chung kết Copa del Rey 2024 diễn ra ở thành phố nào?","Sevilla","Bilbao","Madrid","Valencia"],
+["HLV của Athletic khi giành Copa del Rey 2024 là ai?","Ernesto Valverde","Marcelino","Pep Guardiola","Diego Simeone"],
+["Ở cấp độ quốc tế, Iñaki quyết định đại diện cho đội tuyển nào?","Ghana","Tây Ban Nha","Nigeria","Pháp"],
+["Iñaki chọn khoác áo Ghana vào năm nào?","2022","2016","2019","2024"],
+["Biệt danh của đội tuyển Ghana là gì?","Black Stars","Super Eagles","Indomitable Lions","Teranga Lions"],
+["Iñaki dự World Cup 2022 cùng Ghana tại quốc gia nào?","Qatar","Nga","Brazil","Mỹ"],
+["Trước khi chọn Ghana, Iñaki từng khoác áo đội tuyển nào trong một trận giao hữu?","Tây Ban Nha","Pháp","Anh","Bồ Đào Nha"],
+["Theo trang web, Iñaki có bao nhiêu lần ra sân cho Ghana?","28","12","45","60"],
+["Theo trang web, Iñaki ghi bao nhiêu bàn cho Ghana?","2","0","7","10"],
+["Em trai của Iñaki, cũng chơi cho Athletic, là ai?","Nico Williams","Álex Berenguer","Unai Simón","Oihan Sancet"],
+["Nico Williams cùng Tây Ban Nha vô địch giải nào năm 2024?","EURO 2024","World Cup 2022","Copa América","Nations League 2023"],
+["Iñaki thường chơi ở vị trí nào?","Tiền đạo / tiền đạo cánh","Thủ môn","Trung vệ","Tiền vệ phòng ngự"],
+["Điểm mạnh nổi bật nhất của Iñaki là gì?","Tốc độ bứt phá","Sút phạt","Đánh đầu cao","Bắt bóng bổng"],
+["Iñaki mặc áo số mấy (theo trang web)?","9","7","10","11"],
+["Chiều cao của Iñaki khoảng bao nhiêu?","1,86 m","1,70 m","1,78 m","1,95 m"],
+["Iñaki đi qua những đội nào trước khi lên đội một Athletic?","Basconia và Bilbao Athletic","La Masia và Barcelona B","Castilla và Real Madrid C","Lezama và Real Sociedad B"],
+["Bilbao Athletic là đội nào của Athletic Club?","Đội dự bị (đội B)","Đội nữ","Đội U12","Đội futsal"],
+["Dòng sông chảy qua Bilbao tên là gì?","Nervión","Ebro","Tajo","Guadalquivir"],
+["Bảo tàng nổi tiếng nào nằm ở Bilbao?","Bảo tàng Guggenheim","Bảo tàng Prado","Bảo tàng Louvre","Bảo tàng Vatican"],
+["Ngôn ngữ bản địa của xứ Basque gọi là gì?","Euskara","Catalan","Galego","Occitan"],
+["Chữ “Ñ” trong tên Iñaki được gọi là gì trong tiếng Tây Ban Nha?","Eñe","Ene","Ñu","Ñi"],
+["Chung kết Europa League 2025 được tổ chức tại sân nào?","San Mamés","Wembley","Allianz Arena","Stade de France"],
+["Theo trang web, Iñaki cán mốc 500 trận chính thức cho Athletic vào lúc nào?","Tháng 3/2026","Tháng 5/2022","Tháng 9/2024","Tháng 1/2025"],
+["Theo trang web, Iñaki tuyên bố chia tay đội tuyển Ghana vào tháng mấy năm 2026?","Tháng 9","Tháng 1","Tháng 4","Tháng 12"],
+["Cung hoàng đạo của Iñaki (sinh ngày 15/6) là gì?","Song Tử","Bạch Dương","Sư Tử","Bảo Bình"],
+["Athletic Club thi đấu ở giải vô địch quốc gia nào?","LaLiga","Serie A","Premier League","Bundesliga"],
+["Copa del Rey là giải đấu gì?","Cúp quốc gia Tây Ban Nha","Giải vô địch quốc gia Tây Ban Nha","Cúp châu Âu","Siêu cúp thế giới"]
+];
+var QN=10,qi=0,sc=0,Q=[],box=$('#qbox');
+function shuf(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),t=a[i];a[i]=a[j];a[j]=t}return a}
+function newRound(){
+  Q=shuf(QB).slice(0,QN).map(function(x){var o=shuf(x.slice(1));return {q:x[0],o:o,a:o.indexOf(x[1])}});
+  qi=0;sc=0;showQ();
+}
+function showQ(){
+  var c=Q[qi];
+  box.innerHTML='<div class="q-top"><span>Câu '+(qi+1)+' / '+Q.length+'</span><span>Điểm: '+sc+'</span></div><div class="q-bar"><i style="width:'+(qi/Q.length*100)+'%"></i></div><h3 id="qtext"></h3><div class="opts"></div><button class="btn" id="qnext" type="button"></button>';
+  $('#qtext').textContent=c.q;
+  var wrap=$('.opts',box);
+  c.o.forEach(function(t,i){
+    var bt=document.createElement('button');bt.className='opt';bt.type='button';bt.textContent=t;
+    bt.onclick=function(){
+      $$('.opt',box).forEach(function(x,j){x.disabled=true;if(j===c.a)x.classList.add('ok')});
+      if(i===c.a)sc++;else bt.classList.add('no');
+      var nx=$('#qnext');nx.style.display='inline-block';nx.textContent=qi<Q.length-1?'Câu tiếp theo →':'Xem kết quả';
+      nx.onclick=function(){qi++;qi<Q.length?showQ():result()};
+    };
+    wrap.appendChild(bt);
+  });
+}
+function result(){
+  var best=0;
+  try{best=+localStorage.getItem('iw_qbest')||0;if(sc>best){best=sc;localStorage.setItem('iw_qbest',best)}}catch(e){if(sc>best)best=sc}
+  var r=sc>=9?'Sư tử Bilbao 🦁':sc>=6?'Fan cứng Athletic ❤️':'Fan mới nhập môn ⚽';
+  box.innerHTML='<div class="q-result"><div class="kicker">Kết quả</div><h3>'+sc+' / '+Q.length+'</h3><p style="font-size:16px;font-weight:600;margin:6px 0 4px">'+r+'</p><p style="font-size:12px;color:var(--muted);margin:0 0 24px">Kỷ lục của bạn: '+best+' / '+Q.length+' · Kho có '+QB.length+' câu, mỗi lượt chọn ngẫu nhiên '+QN+' câu</p><button class="btn" style="background:var(--red);border-color:var(--red)" id="qre" type="button">Chơi lại với bộ câu hỏi mới</button></div>';
+  $('#qre').onclick=newRound;
+}
+newRound();
+})();
+
+/* ===== Đoán cầu thủ mỗi ngày (kiểu Wordle) ===== */
+(function(){
+/* Kho cầu thủ: MÃ_NƯỚC:họ1,họ2,... — thêm tên mới ở đây (4–9 chữ cái, bỏ dấu khi tính) */
+var PD="AR:Messi,Maradona,Batistuta,Riquelme,Zanetti,Agüero,Dybala,Álvarez,Otamendi,Romero,Tevez,Crespo,Higuaín,Paredes,Kempes,Passarella,Ortega,Simeone,Verón,Aimar,Saviola,Montiel,Garnacho,Molina,Palacios,Di Stéfano;"+
+"PT:Ronaldo,Figo,Eusébio,Pepe,Félix,Leão,Dias,Cancelo,Vitinha,Neves,Deco,Nani,Quaresma,Moutinho,Fernandes,Carvalho,Coentrão,Semedo,Guerreiro,Pauleta,Futre,Coluna,Maniche,Simão,Postiga;"+
+"BR:Neymar,Pelé,Kaká,Rivaldo,Romário,Cafu,Marcelo,Casemiro,Vinícius,Rodrygo,Raphinha,Alisson,Ederson,Firmino,Fabinho,Zico,Garrincha,Sócrates,Bebeto,Militão,Endrick,Paquetá,Antony,Coutinho,Adriano,Robinho,Dida,Taffarel,Jairzinho,Tostão,Careca,Branco,Savinho,Bremer,Gerson,Willian,Oscar,Fred,Elano,Kléberson,Denílson;"+
+"FR:Mbappé,Zidane,Henry,Platini,Griezmann,Benzema,Giroud,Pogba,Kanté,Dembélé,Camavinga,Saliba,Maignan,Varane,Lloris,Vieira,Makélélé,Ribéry,Cantona,Thuram,Deschamps,Fontaine,Kopa,Olise,Doué,Rabiot,Coman,Lacazette,Evra,Trézéguet,Pires,Desailly,Blanc,Barthez,Lizarazu,Petit,Anelka,Papin,Nasri,Payet,Gignac,Mandanda,Konaté,Upamecano,Digne,Clichy,Sagna,Nkunku,Barcola;"+
+"ES:Yamal,Pedri,Gavi,Rodri,Iniesta,Xavi,Casillas,Ramos,Piqué,Puyol,Busquets,Villa,Raúl,Morata,Olmo,Williams,Carvajal,Cucurella,Laporte,Zubimendi,Merino,Oyarzabal,Fàbregas,Mata,Alba,Reina,Valdés,Isco,Koke,Saúl,Asensio,Guardiola,Hierro,Míchel,Aduriz,Capdevila,Marchena,Arbeloa,Albiol,Cazorla,Negredo,Baena,Grimaldo,Zarra,Iribar,Muniain,Susaeta,Iraola,Sancet,Berenguer,Yuri,Gainza;"+
+"EN:Kane,Saka,Foden,Rice,Stones,Walker,Rooney,Beckham,Gerrard,Lampard,Owen,Shearer,Lineker,Scholes,Terry,Ferdinand,Shilton,Banks,Moore,Charlton,Pickford,Trippier,Maguire,Grealish,Sterling,Rashford,Mount,Palmer,Gordon,Watkins,Toney,Henderson,Vardy,Bowen,Mainoo,Walcott,Hurst,Greaves,Matthews,Platt,Seaman,Crouch,Defoe,Heskey,Dier,Wilshere,Barkley,Lingard,Welbeck,Sancho,Mings,Chilwell,Gallagher,Guehi,Ramsdale,Shaw;"+
+"DE:Neuer,Kroos,Müller,Musiala,Wirtz,Havertz,Gündoğan,Kimmich,Rüdiger,Sané,Gnabry,Klose,Ballack,Lahm,Matthäus,Klinsmann,Völler,Podolski,Özil,Reus,Hummels,Boateng,Khedira,Draxler,Werner,Brehme,Netzer,Kahn,Lehmann,Füllkrug,Götze,Schürrle,Seeler,Overath,Breitner,Kehl,Kruse,Süle,Adeyemi,Undav,Brandt,Raum,Ter Stegen,Trapp,Leno;"+
+"NL:Cruyff,Depay,Gakpo,Dumfries,Bergkamp,Seedorf,Davids,Robben,Sneijder,Kluivert,Gullit,Rijkaard,Overmars,Stam,Koeman,Weghorst,Blind,Timber,Reijnders,Frimpong,Cillessen,Zirkzee,Maatsen,Van Basten,Van Dijk,De Jong,De Ligt,Van Persie,Van der Sar,Neeskens,Krol,Wijnaldum,Strootman,Huntelaar,Kuyt;"+
+"IT:Maldini,Baggio,Totti,Pirlo,Buffon,Cannavaro,Nesta,Inzaghi,Chiellini,Bonucci,Barella,Verratti,Chiesa,Immobile,Insigne,Jorginho,Tonali,Zola,Vialli,Rossi,Zoff,Baresi,Gattuso,Albertini,Toldo,Scamacca,Retegui,Locatelli,Bastoni,Dimarco,Del Piero,Riva,Facchetti,Rivera,Mazzola,Conte,Cassano,Balotelli,Materazzi,Zambrotta,Peruzzi,Calafiori,Politano,Raspadori,Montella,Vieri,Signori,Ambrosini,Gilardino,Toni,Pazzini,Grosso,Perrotta,De Rossi;"+
+"NO:Haaland,Ødegaard,Sørloth,Berge,Solskjær,Riise,Carew,Nusa,Bobb,Ajer;"+
+"EG:Salah,Elneny,Marmoush,Zizo,Aboutrika;"+
+"SN:Mané,Koulibaly,Diouf,Gueye,Sarr,Jackson;"+
+"CI:Drogba,Zaha,Pépé,Gervinho,Kalou,Haller,Tioté,Bailly,Kessié;"+
+"CM:Eto'o,Milla,Song,Mbeumo,Mboma,Aboubakar,Nkoulou,Webo,Geremi,Lauren,Womé;"+
+"NG:Okocha,Osimhen,Lookman,Kanu,Yekini,Iheanacho,Ndidi,Mikel,Babayaro,Oliseh,Amokachi,Chukwueze,Aribo,Ighalo,Emenike;"+
+"GH:Partey,Kudus,Essien,Ayew,Gyan,Muntari,Appiah,Asamoah,Atsu,Semenyo,Wakaso,Amartey;"+
+"MA:Hakimi,Ziyech,Bounou,Amrabat,En-Nesyri,Mazraoui,Saïss,Aguerd,Boufal,Belhanda,Chamakh,Ounahi;"+
+"DZ:Mahrez,Bennacer,Slimani,Bounedjah,Belloumi,Madjer,Feghouli,Brahimi,Atal,Ghoulam,Bentaleb;"+
+"LR:Weah;TG:Adebayor;"+
+"HR:Modrić,Rakitić,Mandžukić,Perišić,Šuker,Boban,Kovačić,Gvardiol,Brozović,Subašić,Olić,Kramarić,Pašalić,Livaković,Vida,Lovren,Srna,Čorluka,Pjaca,Majer,Budimir;"+
+"BE:Hazard,Lukaku,Courtois,Kompany,Tielemans,Doku,Trossard,Carrasco,Witsel,Mertens,Fellaini,Scifo,De Bruyne,Lukebakio,Openda,Meunier,Castagne,Vermaelen,Origi,Benteke,Januzaj,Chadli,Praet,Mignolet,Casteels,Vanaken;"+
+"PL:Szczęsny,Zieliński,Milik,Boniek,Lato,Glik,Piszczek,Zalewski,Fabiański,Grosicki,Bednarek,Świderski,Buksa,Kiwior;"+
+"UY:Suárez,Cavani,Forlán,Valverde,Araújo,Godín,Recoba,Bentancur,Muslera,Lugano,Abreu,Gargano,Pellistri,Ugarte,Olivera,Coates,Cáceres,Stuani;"+
+"CO:Falcao,Higuita,Asprilla,Cuadrado,Ospina,Zapata,Muriel,Arias,Mina,Borré,Cardona,Lerma,Uribe,Yepes,Bacca,Ibarbo,Rincón,Quintero;"+
+"CL:Vidal,Bravo,Zamorano,Salas,Medel,Vargas,Valdivia,Isla,Aránguiz,Pinilla,Brereton,Jara,Suazo;"+
+"MX:Ochoa,Márquez,Lozano,Jiménez,Blanco,Guardado,Herrera,Pineda,Montes,Vega,Gallardo,Borgetti,Campos,Layún,Corona,Giménez;"+
+"US:Pulisic,Dempsey,Donovan,McKennie,Reyna,Howard,Balogun,Dest,Musah,Turner,Robinson,Ream,Altidore,Wynalda,Lalas,Keller,Friedel,Pepi,Aaronson,Tillman,Zardes;"+
+"JP:Kubo,Mitoma,Minamino,Kagawa,Nakata,Honda,Tomiyasu,Endō,Ueda,Dōan,Nakamura,Okazaki,Kamada,Hasebe,Nagatomo,Haraguchi,Inui,Sakai,Osako,Morita,Itakura,Maeda,Hatate;"+
+"KR:Hwang;"+
+"SE:Larsson,Isak,Gyökeres,Brolin,Ljungberg,Dahlin,Forsberg,Lindelöf,Elmander,Mellberg,Svensson;"+
+"DK:Eriksen,Laudrup,Højlund,Kjær,Bendtner,Delaney,Dolberg,Poulsen,Rommedahl,Tomasson,Damsgaard,Lerager,Nørgaard,Wind;"+
+"CH:Xhaka,Sommer,Embolo,Akanji,Shaqiri,Ndoye,Freuler,Elvedi,Frei,Streller,Sforza,Chapuisat,Behrami,Zakaria,Okafor,Aebischer,Rieder,Schär,Widmer,Mehmedi;"+
+"AT:Alaba,Sabitzer,Laimer,Kalajdžić,Prohaska,Krankl,Wimmer,Schlager,Seiwald,Lienhart,Dragović,Leitgeb,Fuchs,Harnik,Janko;"+
+"RS:Vlahović,Mitrović,Tadić,Stanković,Vidić,Ivanović,Kolarov,Matić,Jović,Stojković,Kostić,Pavlović,Ljajić,Krstajić,Lukić,Gudelj;"+
+"TR:Güler,Şükür,Yıldız,Demiral,Tosun,Altıntop,Rüştü,Şahin,Kökçü,Tugay,Sabri,Yazıcı,Soyuncu,Çakır,Kahveci,Tufan,Elmas;"+
+"CZ:Nedvěd,Čech,Rosický,Schick,Souček,Koller,Poborský,Berger,Barák,Hložek,Coufal,Plašil,Baroš;"+
+"UA:Zinchenko,Mudryk,Dovbyk,Lunin,Rebrov,Blokhin,Zubkov,Besedin,Sudakov,Trubin,Mykolenko;"+
+"SC:McTominay,Robertson,Dalglish,Souness,McGinn,Tierney,Gilmour,Law,Bremner,Strachan,Collins,Fletcher,Hanley;"+
+"WA:Bale,Ramsey,Giggs,Rush,Hughes,Allen,Ampadu,Southall,Speed,Bellamy,Vokes;"+
+"IE:Duff,Brady,McGrath,Given,Stapleton,Houghton,Doherty,Ferguson,Parrott,Hendrick,O'Shea,Staunton,Irwin,Aldridge,Townsend;"+
+"RU:Yashin,Arshavin,Akinfeev,Dzyuba,Golovin,Zhirkov,Smolov,Kerzhakov,Semak,Karpin,Onopko,Sobolev;"+
+"RO:Hagi,Popescu,Drăgușin,Mutu,Lăcătuș,Chivu,Stanciu,Petrescu,Marin,Radu,Nedelcu;"+
+"HU:Puskás,Kocsis,Orbán,Sallai,Gulácsi,Varga,Hidegkuti,Albert,Bozsik,Détári,Szalai,Gera,Kerkez,Dibusz,Fiola,Schäfer;"+
+"BG:Stoichkov,Berbatov,Balakov,Penev;"+
+"SI:Oblak,Šeško,Iličić,Kurtić,Bijol,Šporar,Verbič;"+
+"SK:Škriniar,Hamšík,Weiss,Lobotka,Vavro,Haraslín,Šatka,Duda;"+
+"AU:Cahill,Kewell,Ryan,Mooy,Viduka,Irvine,Bresciano,Leckie,Mabil,Souttar;"+
+"CA:Davies,David,Larin,Buchanan,Osorio,Johnston,Eustáquio,Cornelius,Millar,Laryea,Piette,De Rosario;"+
+"EC:Caicedo,Valencia,Hincapié,Estupiñán,Plata,Méndez,Páez,Delgado,Arboleda,Ibarra,Gruezo;"+
+"PE:Cubillas,Guerrero,Farfán,Solano,Pizarro,Carrillo,Lapadula,Cueva,Flores,Ruidíaz,Yotún,Advíncula,Gareca;"+
+"PY:Almirón,Chilavert,Gamarra,Cardozo,Sanabria,Cabañas,Caniza,Enciso,Alderete;"+
+"VE:Rondón,Soteldo,Savarino,Bello,Machís,Otero,Arango;"+
+"CR:Campbell,Wanchope,Saborío,Fonseca,Conejo,Gamboa,Duarte,Solís;"+
+"IR:Taremi,Azmoun,Daei,Karimi,Ghoddos,Rezaei;"+
+"SA:Owairan,Jaber;"+
+"MK:Pandev,Bardhi,Alioski;"+
+"BA:Džeko,Pjanić,Kolašinac,Ibišević,Begović;"+
+"FI:Pukki,Litmanen,Hradecky;"+
+"GR:Samaras,Mitroglou,Dellas,Bakasetas";
+var CN={AR:"Argentina",PT:"Bồ Đào Nha",BR:"Brazil",FR:"Pháp",ES:"Tây Ban Nha",EN:"Anh",DE:"Đức",NL:"Hà Lan",IT:"Ý",NO:"Na Uy",EG:"Ai Cập",SN:"Senegal",CI:"Bờ Biển Ngà",CM:"Cameroon",NG:"Nigeria",GH:"Ghana",MA:"Ma-rốc",DZ:"Algeria",LR:"Liberia",TG:"Togo",HR:"Croatia",BE:"Bỉ",PL:"Ba Lan",UY:"Uruguay",CO:"Colombia",CL:"Chile",MX:"Mexico",US:"Mỹ",JP:"Nhật Bản",KR:"Hàn Quốc",SE:"Thụy Điển",DK:"Đan Mạch",CH:"Thụy Sĩ",AT:"Áo",RS:"Serbia",TR:"Thổ Nhĩ Kỳ",CZ:"Cộng hòa Séc",UA:"Ukraina",SC:"Scotland",WA:"Xứ Wales",IE:"Ireland",RU:"Nga",RO:"Romania",HU:"Hungary",BG:"Bulgaria",SI:"Slovenia",SK:"Slovakia",AU:"Úc",CA:"Canada",EC:"Ecuador",PE:"Peru",PY:"Paraguay",VE:"Venezuela",CR:"Costa Rica",IR:"Iran",SA:"Ả Rập Xê Út",MK:"Bắc Macedonia",BA:"Bosnia và Herzegovina",FI:"Phần Lan",GR:"Hy Lạp"};
+
+function KEY(s){return s.normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/ø/gi,"o").replace(/æ/gi,"ae").replace(/ı/g,"i").replace(/đ/gi,"d").replace(/ß/g,"ss").replace(/[^A-Za-z]/g,"").toUpperCase()}
+
+var POOL=[],seen={};
+PD.split(";").forEach(function(g){
+  var p=g.split(":"),c=CN[p[0]]||"";
+  p[1].split(",").forEach(function(n){
+    n=n.trim();var k=KEY(n);
+    if(k.length>=4&&k.length<=9&&!seen[k]){seen[k]=1;POOL.push({n:n,k:k,c:c})}
+  });
+});
+
+/* Thứ tự cố định (xáo trộn bằng seed) -> mỗi ngày một cầu thủ khác, không lặp lại cho tới khi hết cả kho */
+function rng(a){return function(){a|=0;a=a+0x6D2B79F5|0;var t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+var PERM=[],R=rng(20261117),i,j,tmp;
+for(i=0;i<POOL.length;i++)PERM.push(i);
+for(i=PERM.length-1;i>0;i--){j=Math.floor(R()*(i+1));tmp=PERM[i];PERM[i]=PERM[j];PERM[j]=tmp}
+
+var DN0=Math.floor(Date.UTC(2026,0,1)/864e5);
+function dayNum(){var d=new Date();return Math.floor(Date.UTC(d.getFullYear(),d.getMonth(),d.getDate())/864e5)}
+
+var mem={};
+function ld(k,def){try{var v=localStorage.getItem(k);if(v)return JSON.parse(v)}catch(e){}return mem[k]!==undefined?mem[k]:def}
+function sv(k,v){mem[k]=v;try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+
+var DN,ANS,N,G,SK,cur="",busy=false,rowsEl=[];
+
+function score(g,a){
+  var n=a.length,r=[],cnt={},k;
+  for(k=0;k<n;k++){r[k]="absent";if(g[k]===a[k])r[k]="correct";else cnt[a[k]]=(cnt[a[k]]||0)+1}
+  for(k=0;k<n;k++){if(r[k]!=="correct"&&cnt[g[k]]>0){r[k]="present";cnt[g[k]]--}}
+  return r;
+}
+function effStreak(){return(SK.last===DN||SK.last===DN-1)?SK.streak:0}
+
+function initDay(){
+  DN=dayNum();ANS=POOL[PERM[((DN%POOL.length)+POOL.length)%POOL.length]];N=ANS.k.length;
+  var g=ld("iw_pg",null);G=(g&&g.day===DN&&g.g)?g:{day:DN,g:[],s:"play"};
+  SK=ld("iw_pgs",{streak:0,best:0,last:-1,wins:0,played:0});
+  cur="";busy=false;
+  buildBoard();buildKeys();paintKeys();hint();
+  $("#pgmsg").textContent="";$("#pgend").innerHTML="";
+  if(G.s!=="play")showEnd();
+  card();
+}
+
+function buildBoard(){
+  var b=$("#pgboard");b.innerHTML="";b.style.setProperty("--n",N);b.style.maxWidth=(N*64)+"px";rowsEl=[];
+  for(var r=0;r<6;r++){
+    var row=document.createElement("div");row.className="pg-grow";row.style.setProperty("--n",N);
+    var tiles=[];
+    for(var c=0;c<N;c++){var t=document.createElement("div");t.className="pg-tile";row.appendChild(t);tiles.push(t)}
+    b.appendChild(row);rowsEl.push({row:row,tiles:tiles});
+  }
+  G.g.forEach(function(w,r){paintRow(r,w,false)});
+  renderCur();
+}
+function paintRow(r,w,anim){
+  var res=score(w,ANS.k);
+  rowsEl[r].tiles.forEach(function(t,i){t.textContent=w[i];t.className="pg-tile "+res[i]+(anim?" rev":"");t.style.setProperty("--i",i)});
+}
+function renderCur(){
+  var r=G.g.length;if(r>=6)return;
+  rowsEl[r].tiles.forEach(function(t,i){t.textContent=cur[i]||"";t.className="pg-tile"+(cur[i]?" f":"")});
+}
+
+var KR=["QWERTYUIOP","ASDFGHJKL","ZXCVBNM"];
+function mk(k,l,w){var b=document.createElement("button");b.type="button";b.className="pg-key"+(w?" w":"");b.dataset.k=k;b.textContent=l;b.onclick=function(){press(k);b.blur()};return b}
+function buildKeys(){
+  var kb=$("#pgkb");kb.innerHTML="";
+  KR.forEach(function(s,ri){
+    var row=document.createElement("div");row.className="pg-kr";
+    if(ri===2)row.appendChild(mk("ENTER","Enter",true));
+    s.split("").forEach(function(ch){row.appendChild(mk(ch,ch))});
+    if(ri===2)row.appendChild(mk("DEL","⌫",true));
+    kb.appendChild(row);
+  });
+}
+function paintKeys(){
+  var st={};
+  G.g.forEach(function(w){
+    var r=score(w,ANS.k);
+    for(var i=0;i<w.length;i++){
+      var c=w[i],v=r[i],o=st[c];
+      if(o==="correct")continue;
+      if(v==="correct"||(v==="present"&&o!=="present")||!o)st[c]=v;
+    }
+  });
+  $$(".pg-key",$("#pgkb")).forEach(function(b){
+    var s=st[b.dataset.k];b.classList.remove("correct","present","absent");if(s)b.classList.add(s);
+  });
+}
+
+function hint(){
+  var t="Tên (họ) cầu thủ gồm <b>"+N+"</b> chữ cái.";
+  if(G.g.length>=3&&ANS.c)t+=" 💡 Quốc tịch: <b>"+ANS.c+"</b>";
+  $("#pghint").innerHTML=t;
+}
+function toast(t){var m=$("#pgmsg");m.textContent=t;clearTimeout(toast.h);toast.h=setTimeout(function(){m.textContent=""},2400)}
+
+function press(k){
+  if(G.s!=="play"||busy)return;
+  if(k==="ENTER"){submit();return}
+  if(k==="DEL"){cur=cur.slice(0,-1);renderCur();return}
+  if(cur.length<N){cur+=k;renderCur()}
+}
+function submit(){
+  if(cur.length<N){
+    var rw=rowsEl[G.g.length].row;rw.classList.remove("shake");void rw.offsetWidth;rw.classList.add("shake");
+    toast("Cần đủ "+N+" chữ cái");return;
+  }
+  var w=cur,r=G.g.length;G.g.push(w);cur="";
+  var win=(w===ANS.k),lose=!win&&G.g.length>=6;
+  if(win){G.s="win";SK.streak=(SK.last===DN-1)?SK.streak+1:1;SK.last=DN;SK.best=Math.max(SK.best,SK.streak);SK.wins++;SK.played++}
+  else if(lose){G.s="lose";SK.streak=0;SK.played++}
+  sv("iw_pg",G);sv("iw_pgs",SK);
+  busy=true;paintRow(r,w,true);
+  setTimeout(function(){
+    busy=false;paintKeys();hint();card();
+    if(G.s!=="play"){showEnd();toast(win?"Chính xác! 🎉":"Hết lượt rồi 😢")}
+  },N*280+450);
+}
+
+function card(){
+  $("#pgstreak").textContent=effStreak();
+  $("#pgbest").textContent=SK.best+" ngày";
+  $("#pgstatus").textContent=G.s==="win"?"Đã đoán đúng ✅":G.s==="lose"?"Chưa đoán được ❌":G.g.length?"Đang chơi ("+G.g.length+"/6)":"Chưa chơi";
+  var open=$("#pgpanel").classList.contains("open");
+  $("#pgbtn").textContent=open?"Thu gọn":G.s==="play"?(G.g.length?"Chơi tiếp":"Vào chơi"):"Xem kết quả";
+}
+
+function showEnd(){
+  var win=G.s==="win",e=$("#pgend");
+  e.innerHTML='<div class="pg-end"><div class="kicker"></div><h3></h3><p></p><button class="btn" id="pgshare" type="button" style="background:var(--red);border-color:var(--red)">Sao chép kết quả</button></div>';
+  $(".kicker",e).textContent=win?"Chính xác!":"Rất tiếc!";
+  $("h3",e).textContent=ANS.n;
+  $("p",e).textContent=(win?"Bạn đoán đúng sau "+G.g.length+"/6 lượt. ":"Đây là đáp án của hôm nay. ")+(ANS.c?"Quốc tịch: "+ANS.c+". ":"")+"Chuỗi hiện tại: "+effStreak()+" ngày. Cầu thủ mới xuất hiện lúc 0h.";
+  $("#pgshare").onclick=share;
+}
+function fb(t,ok){
+  var a=document.createElement("textarea");a.value=t;a.style.position="fixed";a.style.opacity="0";document.body.appendChild(a);a.select();
+  try{document.execCommand("copy");ok()}catch(e){toast("Không sao chép được")}
+  document.body.removeChild(a);
+}
+function share(){
+  var em={correct:"🟩",present:"🟨",absent:"⬛"};
+  var t="Đoán cầu thủ #"+(DN-DN0+1)+" "+(G.s==="win"?G.g.length:"X")+"/6\n"+G.g.map(function(w){return score(w,ANS.k).map(function(x){return em[x]}).join("")}).join("\n")+"\n🔥 Chuỗi: "+effStreak()+" ngày";
+  function ok(){toast("Đã sao chép kết quả!")}
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(ok,function(){fb(t,ok)})}else fb(t,ok);
+}
+
+$("#pgbtn").onclick=function(){
+  var p=$("#pgpanel");p.classList.toggle("open");card();this.blur();
+  if(p.classList.contains("open"))setTimeout(function(){p.scrollIntoView({behavior:"smooth",block:"start"})},50);
+};
+document.addEventListener("keydown",function(e){
+  var p=$("#pgpanel");
+  if(!p.classList.contains("open")||e.ctrlKey||e.metaKey||e.altKey)return;
+  var a=document.activeElement;if(a&&a!==document.body&&!p.contains(a))return;
+  if(e.key==="Enter"){e.preventDefault();press("ENTER")}
+  else if(e.key==="Backspace"){e.preventDefault();press("DEL")}
+  else if(/^[a-zA-Z]$/.test(e.key))press(e.key.toUpperCase());
+});
+
+function tick(){
+  var n=new Date();
+  if(dayNum()!==DN){initDay();toast("Cầu thủ mới đã sẵn sàng! ⚽")}
+  var m=new Date(n.getFullYear(),n.getMonth(),n.getDate()+1),d=Math.max(0,m-n);
+  var h=Math.floor(d/36e5),mi=Math.floor(d%36e5/6e4),s=Math.floor(d%6e4/1e3);
+  $("#pgcd").textContent=[h,mi,s].map(function(x){return x<10?"0"+x:x}).join(":");
+}
+initDay();tick();setInterval(tick,1000);
+})();
+
+/* gallery tự nhận ảnh inaki5, inaki6, ... */
+var gg=$('#gg'),imgs=[];
+function addFig(src,n){
+  var f=document.createElement('figure'),im=new Image();
+  im.src=src;im.alt='Iñaki Williams — ảnh '+n;im.loading='lazy';
+  f.appendChild(im);var c=document.createElement('figcaption');c.textContent='INAKI'+n;f.appendChild(c);
+  gg.appendChild(f);imgs.push(src);var idx=imgs.length-1;f.onclick=function(){openLb(idx)};
+}
+function probe(n){
+  var src='inaki'+n+'.jpg',t=new Image();
+  t.onload=function(){addFig(src,n);if(n<60)probe(n+1)};
+  t.onerror=function(){if(n===5){for(var k=5;k<=9;k++){var s='inaki'+k+'.jpg',f=document.createElement('figure'),im=new Image();im.alt='Chưa có '+s;im.src=s;im.onerror=function(){ph(this)};f.appendChild(im);gg.appendChild(f)}}};
+  t.src=src;
+}
+probe(5);
+
+/* lightbox + swipe */
+var lb=$('#lb'),li=$('img',lb),cur=0,sx=0;
+function show(){li.src=imgs[cur];$('.cnt',lb).textContent=(cur+1)+' / '+imgs.length}
+function openLb(i){cur=i;show();lb.classList.add('open');document.body.style.overflow='hidden'}
+function closeLb(){lb.classList.remove('open');document.body.style.overflow=''}
+function go(d){cur=(cur+d+imgs.length)%imgs.length;show()}
+$('.x',lb).onclick=closeLb;$('.pv',lb).onclick=function(e){e.stopPropagation();go(-1)};$('.nx',lb).onclick=function(e){e.stopPropagation();go(1)};
+lb.onclick=function(e){if(e.target===lb)closeLb()};
+lb.addEventListener('touchstart',function(e){sx=e.changedTouches[0].clientX},{passive:true});
+lb.addEventListener('touchend',function(e){var dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>50)go(dx<0?1:-1)});
+addEventListener('keydown',function(e){if(!lb.classList.contains('open'))return;if(e.key==='Escape')closeLb();if(e.key==='ArrowRight')go(1);if(e.key==='ArrowLeft')go(-1)});
+})();
+</script>
+</body>
+</html>
