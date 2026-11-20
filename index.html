@@ -251,6 +251,20 @@ footer b{color:#fff}footer a{color:#fff;text-decoration:underline}
   .gallery-grid{column-gap:8px}.gallery-grid figure{margin-bottom:8px}
   footer{flex-direction:column}
 }
+
+/* nút nhạc nền */
+#music{position:fixed;left:16px;bottom:16px;z-index:40;height:46px;padding:0 16px 0 14px;border-radius:999px;background:var(--ink);color:#fff;border:2px solid #fff;display:flex;align-items:center;gap:10px;font:700 12px/1 var(--body);letter-spacing:.5px;text-transform:uppercase;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.3);touch-action:manipulation}
+#music .eq{display:flex;align-items:flex-end;gap:2px;height:16px}
+#music .eq i{width:3px;height:4px;background:#fff;border-radius:1px}
+#music.on{background:var(--red)}
+#music.on .eq i{animation:eq .9s ease-in-out infinite}
+#music.on .eq i:nth-child(2){animation-delay:.2s}
+#music.on .eq i:nth-child(3){animation-delay:.4s}
+#music.on .eq i:nth-child(4){animation-delay:.1s}
+@keyframes eq{0%,100%{height:4px}50%{height:16px}}
+#music.hint{animation:mpulse 1.6s ease-in-out 3}
+@keyframes mpulse{50%{transform:scale(1.08)}}
+
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
 </style>
 <script>
@@ -402,6 +416,13 @@ function ph(el){
 </footer>
 
 <button id="top" aria-label="Lên đầu trang">↑</button>
+
+<!-- Nhạc nền: đặt 10 file inakimusic1.mp3 ... inakimusic10.mp3 cùng thư mục với file này (src được gán bằng JS) -->
+<audio id="bgm" autoplay preload="metadata"></audio>
+<button id="music" type="button" aria-label="Bật/tắt nhạc nền" aria-pressed="false">
+  <span class="eq"><i></i><i></i><i></i><i></i></span><span id="mtxt">Bật nhạc</span>
+</button>
+
 <div id="lb" aria-hidden="true"><button class="x" aria-label="Đóng">✕</button><button class="pv" aria-label="Ảnh trước">‹</button><img alt=""><button class="nx" aria-label="Ảnh sau">›</button><div class="cnt"></div></div>
 
 <script>
@@ -833,6 +854,80 @@ lb.onclick=function(e){if(e.target===lb)closeLb()};
 lb.addEventListener('touchstart',function(e){sx=e.changedTouches[0].clientX},{passive:true});
 lb.addEventListener('touchend',function(e){var dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>50)go(dx<0?1:-1)});
 addEventListener('keydown',function(e){if(!lb.classList.contains('open'))return;if(e.key==='Escape')closeLb();if(e.key==='ArrowRight')go(1);if(e.key==='ArrowLeft')go(-1)});
+})();
+</script>
+
+<!-- Nhạc nền: tự phát khi mở web; nếu trình duyệt chặn thì phát ở lần chạm / cuộn / bấm phím đầu tiên -->
+<script>
+(function(){
+  var a=document.getElementById('bgm'),b=document.getElementById('music'),t=document.getElementById('mtxt');
+  var userOff=false,wasPlaying=false,trying=false,dead=false;
+  var EV=['pointerdown','pointerup','touchstart','touchend','click','keydown','wheel','touchmove','scroll'];
+  a.volume=0.5;
+
+  /* Danh sách 10 bài: xáo trộn ngẫu nhiên, phát hết cả 10 bài mới xáo lại (không bài nào lặp trước khi đủ vòng) */
+  var TOTAL=10,order=[],pos=0,last=-1,fails=0;
+  function shuffle(){
+    var i,j,x;order=[];
+    for(i=1;i<=TOTAL;i++)order.push(i);
+    for(i=TOTAL-1;i>0;i--){j=Math.floor(Math.random()*(i+1));x=order[i];order[i]=order[j];order[j]=x}
+    /* vòng mới không bắt đầu bằng bài vừa phát xong */
+    if(order[0]===last&&TOTAL>1){j=1+Math.floor(Math.random()*(TOTAL-1));x=order[0];order[0]=order[j];order[j]=x}
+    pos=0;
+  }
+  function load(){last=order[pos];a.src='inakimusic'+last+'.mp3'}
+  function next(){pos++;if(pos>=order.length)shuffle();load()}
+  shuffle();load();
+  a.addEventListener('ended',function(){next();if(!userOff)a.play().catch(function(){})});
+  a.addEventListener('playing',function(){fails=0;ui(true);detach()});
+
+  function ui(on){b.classList.toggle('on',on);b.setAttribute('aria-pressed',on);t.textContent=on?'Tắt nhạc':'Bật nhạc'}
+  function detach(){EV.forEach(function(e){window.removeEventListener(e,onGesture,true)})}
+  function attach(){EV.forEach(function(e){window.addEventListener(e,onGesture,{capture:true,passive:true})})}
+
+  function tryPlay(){
+    if(trying||dead||userOff||!a.paused)return;
+    trying=true;
+    var p=a.play();
+    if(p&&p.then){
+      p.then(function(){trying=false;ui(true);detach()})
+       .catch(function(err){
+         trying=false;
+         /* lỗi file nhạc được xử lý ở sự kiện error bên dưới */
+       });
+    }else{trying=false}
+  }
+
+  /* lần chạm / cuộn / bấm phím đầu tiên sẽ mở khóa nhạc */
+  function onGesture(e){
+    if(b.contains(e.target))return;   /* nút nhạc tự xử lý */
+    tryPlay();
+  }
+
+  /* nút bật/tắt: người dùng tắt thì không tự phát lại nữa */
+  b.onclick=function(){
+    if(a.paused){userOff=false;dead=false;trying=false;tryPlay()}
+    else{userOff=true;a.pause();ui(false);detach()}
+  };
+
+  /* file nào thiếu/lỗi thì bỏ qua sang bài kế; cả 10 file đều lỗi thì dừng */
+  a.addEventListener('error',function(){
+    fails++;trying=false;
+    if(fails>=TOTAL){dead=true;detach();ui(false);t.textContent='Chưa có file nhạc';return}
+    next();
+    if(!userOff)a.play().catch(function(){});
+  });
+
+  /* tạm dừng khi chuyển tab / khóa màn hình, quay lại thì phát tiếp */
+  document.addEventListener('visibilitychange',function(){
+    if(document.hidden){wasPlaying=!a.paused;if(wasPlaying)a.pause()}
+    else if(wasPlaying){wasPlaying=false;a.play().catch(function(){})}
+  });
+
+  attach();
+  tryPlay();                                   /* thử phát ngay khi mở web */
+  a.addEventListener('canplay',tryPlay,{once:true});
+  setTimeout(function(){if(a.paused&&!dead)b.classList.add('hint')},3200);
 })();
 </script>
 </body>
