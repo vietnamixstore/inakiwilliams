@@ -34,12 +34,16 @@ button{font-family:inherit}
 .topline{height:7px;background:repeating-linear-gradient(90deg,var(--red) 0 42px,#fff 42px 84px)}
 header{height:72px;padding:0 6vw;display:flex;align-items:center;justify-content:space-between;background:#fff;position:sticky;top:0;z-index:50;border-bottom:1px solid #eee}
 .brand{font:900 27px/1 var(--head);letter-spacing:1px;white-space:nowrap}.brand span{color:var(--red)}
-nav{display:flex;gap:26px;font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase}
+nav{display:flex;gap:26px;font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;align-items:center}
 nav a{padding:6px 0;border-bottom:2px solid transparent}
 nav a:hover,nav a.on{color:var(--red);border-color:var(--red)}
+/* nút Theo dõi (TikTok) + Mua sắm ngay (Zalo) */
+nav .nav-cta{padding:9px 16px;border:0;border-radius:999px;background:var(--red);color:#fff;white-space:nowrap;transition:.2s}
+nav .nav-cta.zalo{background:#0068ff}
+nav .nav-cta:hover{color:#fff;filter:brightness(1.12);transform:translateY(-2px)}
 .menu{display:none;border:0;background:none;font-size:28px;line-height:1;width:44px;height:44px;cursor:pointer}
 
-.hero{min-height:660px;background:var(--red);position:relative;overflow:hidden;color:#fff;display:grid;grid-template-columns:1fr 1fr;gap:20px;padding:70px 8vw 0;align-items:center}
+.hero{min-height:720px;background:var(--red);position:relative;overflow:hidden;color:#fff;display:grid;grid-template-columns:.9fr 1.1fr;gap:20px;padding:70px 8vw 0;align-items:center}
 .hero:before{content:"ATHLETIC";position:absolute;font:900 clamp(110px,24vw,360px)/.9 var(--head);letter-spacing:-8px;color:#fff;opacity:.055;left:-2vw;bottom:-20px;white-space:nowrap;pointer-events:none}
 .hero-copy{position:relative;z-index:2;padding-bottom:55px}
 .eyebrow{font-size:11px;letter-spacing:2.5px;font-weight:700;text-transform:uppercase;display:flex;align-items:center;gap:12px}
@@ -51,7 +55,7 @@ nav a:hover,nav a.on{color:var(--red);border-color:var(--red)}
 .btn{padding:14px 22px;font-size:12px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;border:1px solid #fff;display:inline-block;transition:.2s;cursor:pointer;background:transparent;color:#fff;line-height:1.3}
 .btn.light{background:#fff;color:var(--red)}
 .btn:hover{transform:translateY(-3px)}
-.hero-photo{height:540px;position:relative;z-index:1;align-self:end}
+.hero-photo{height:620px;position:relative;z-index:1;align-self:end}
 .hero-photo img{position:relative;z-index:2;height:100%;width:100%;object-fit:contain;object-position:50% 100%;filter:drop-shadow(0 18px 28px rgba(0,0,0,.35))}
 .hero-number{position:absolute;z-index:1;left:50%;transform:translateX(-50%);bottom:8%;font:900 clamp(150px,22vw,300px)/.9 var(--head);color:#fff;opacity:.18;pointer-events:none}
 
@@ -155,7 +159,7 @@ section{padding:100px 8vw}
 .pg-end h3{font:900 clamp(40px,10vw,60px)/1.1 var(--head);margin:6px 0;text-transform:uppercase;color:var(--red)}
 .pg-end p{margin:4px 0 18px;font-size:14px;color:#58585e;line-height:1.7}
 @media(max-width:560px){.pg-card{grid-template-columns:1fr;padding:22px 18px;gap:18px}.pg-streak{border-right:0;border-bottom:2px solid var(--line);padding:0 0 18px}.pg-key{height:48px}}
-@media(max-width:1100px) and (min-width:901px){nav{gap:13px;font-size:11px;letter-spacing:0}}
+@media(max-width:1100px) and (min-width:901px){nav{gap:10px;font-size:10.5px;letter-spacing:0}nav .nav-cta{padding:8px 11px}}
 
 /* quiz */
 .quiz{background:#fff}
@@ -206,13 +210,14 @@ footer b{color:#fff}footer a{color:#fff;text-decoration:underline}
 
 /* ===== Tablet / Mobile ===== */
 @media(max-width:900px){
-  nav{position:fixed;top:79px;left:0;right:0;background:#fff;flex-direction:column;gap:0;padding:8px 6vw 16px;border-bottom:3px solid var(--red);display:none;font-size:14px}
+  nav{position:fixed;top:79px;left:0;right:0;background:#fff;flex-direction:column;align-items:stretch;gap:0;padding:8px 6vw 16px;border-bottom:3px solid var(--red);display:none;font-size:14px}
   nav.open{display:flex}
   nav a{padding:14px 0;border-bottom:1px solid var(--line)}
+  nav .nav-cta{display:block;text-align:center;border-radius:6px;padding:14px;margin-top:10px;border-bottom:0}
   .menu{display:block}
   .hero{grid-template-columns:1fr;padding:60px 7vw 0;min-height:0}
   .hero-copy{padding-bottom:10px}
-  .hero-photo{height:400px}
+  .hero-photo{height:470px}
   .hero-number{font-size:120px}
   .strip{grid-template-columns:1fr 1fr;padding:24px 7vw}
   section{padding:75px 7vw}
@@ -225,7 +230,7 @@ footer b{color:#fff}footer a{color:#fff;text-decoration:underline}
 @media(max-width:480px){
   header{height:64px}nav{top:71px}
   .brand{font-size:23px}
-  .hero-photo{height:330px}
+  .hero-photo{height:390px}
   .hero-actions .btn{flex:1;text-align:center;padding:14px 12px}
   .story-img{height:330px}
   .story-text h3{font-size:30px}
@@ -258,6 +263,8 @@ function ph(el){
   <a class="brand" href="#">THE <span>WILLIAMS</span> FILE</a>
   <nav id="nav">
     <a href="#story">Câu chuyện</a><a href="#career">Sự nghiệp</a><a href="#legacy">Dấu ấn</a><a href="#streak">251</a><a href="#game">Thử tốc độ</a><a href="#guess">Đoán tên</a><a href="#quiz">Quiz</a><a href="#gallery">Ảnh</a>
+    <a class="nav-cta" href="https://www.tiktok.com/@toanwilliams?_r=1&_t=ZS-9BTQH3mYDT8" target="_blank" rel="noopener">Theo dõi tôi</a>
+    <a class="nav-cta zalo" href="https://zalo.me/0378484307" target="_blank" rel="noopener">Mua sắm ngay</a>
   </nav>
   <button class="menu" id="menu" aria-label="Mở menu" aria-expanded="false">☰</button>
 </header>
