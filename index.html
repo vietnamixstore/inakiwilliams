@@ -41,8 +41,8 @@ nav a:hover,nav a.on{color:var(--red);border-color:var(--red)}
 nav .nav-cta{padding:9px 16px;border:0;border-radius:999px;background:var(--red);color:#fff;white-space:nowrap;transition:.2s}
 nav .nav-cta.zalo{background:#0068ff}
 nav .nav-cta:hover{color:#fff;filter:brightness(1.12);transform:translateY(-2px)}
-nav .nav-cta.vnx{background:#fff;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink);display:inline-flex;align-items:center;gap:7px;padding:6px 14px 6px 10px}
-nav .nav-cta.vnx img{height:22px;width:auto;display:block}
+nav .nav-cta.vnx{background:#fff;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink);display:inline-flex;align-items:center;gap:7px;padding:5px 16px 5px 12px}
+nav .nav-cta.vnx img{height:30px;width:auto;display:block}
 nav .nav-cta.vnx:hover{color:var(--ink)}
 /* thanh nút nhanh trên điện thoại (kiểu icon + chữ) */
 .quickbar{display:none}
@@ -60,8 +60,8 @@ nav .nav-cta.vnx:hover{color:var(--ink)}
 .btn{padding:14px 22px;font-size:12px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;border:1px solid #fff;display:inline-block;transition:.2s;cursor:pointer;background:transparent;color:#fff;line-height:1.3}
 .btn.light{background:#fff;color:var(--red)}
 .btn:hover{transform:translateY(-3px)}
-.hero-photo{height:620px;position:relative;z-index:1;align-self:end}
-.hero-photo img{position:relative;z-index:2;height:100%;width:100%;object-fit:contain;object-position:50% 100%;filter:drop-shadow(0 18px 28px rgba(0,0,0,.35))}
+.hero-photo{height:680px;position:relative;z-index:1;align-self:end}
+.hero-photo img{position:relative;z-index:2;height:100%;width:100%;object-fit:contain;object-position:50% 100%;transform:scale(1.3);transform-origin:50% 100%;filter:drop-shadow(0 18px 28px rgba(0,0,0,.35))}
 .hero-number{position:absolute;z-index:1;left:50%;transform:translateX(-50%);bottom:8%;font:900 clamp(150px,22vw,300px)/.9 var(--head);color:#fff;opacity:.18;pointer-events:none}
 
 .strip{background:#171719;color:#fff;display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding:24px 6vw;text-align:center}
@@ -221,12 +221,12 @@ footer b{color:#fff}footer a{color:#fff;text-decoration:underline}
   nav .nav-cta,nav .nav-cta.vnx{display:none}
   .quickbar{display:flex;background:#fff;overflow-x:auto;-webkit-overflow-scrolling:touch;padding:12px 3vw 12px;gap:4px;border-bottom:4px solid transparent;border-image:linear-gradient(90deg,var(--ink) 0 50%,var(--red) 50% 100%) 1}
   .quickbar a{flex:1 0 96px;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:7px;color:var(--ink);font:800 17px/1 var(--head);text-transform:uppercase;letter-spacing:.2px;text-align:center;white-space:nowrap}
-  .quickbar svg,.quickbar img{height:34px;width:auto;display:block}
+  .quickbar svg,.quickbar img{height:38px;width:auto;display:block}
   .quickbar a:active{color:var(--red)}
   .menu{display:block}
   .hero{grid-template-columns:1fr;padding:60px 7vw 0;min-height:0}
   .hero-copy{padding-bottom:10px}
-  .hero-photo{height:470px}
+  .hero-photo{height:480px}.hero-photo img{transform:scale(1.2)}
   .hero-number{font-size:120px}
   .strip{grid-template-columns:1fr 1fr;padding:24px 7vw}
   section{padding:75px 7vw}
@@ -292,7 +292,7 @@ function ph(el){
     <p>Tốc độ, sức mạnh và lòng trung thành. Hành trình của chàng trai Bilbao trở thành một trong những biểu tượng hiện đại của Athletic Club.</p>
     <div class="hero-actions"><a class="btn light" href="#career">Khám phá hành trình ↓</a><a class="btn" href="#game">Thử tốc độ ⚡</a></div>
   </div>
-  <div class="hero-photo"><img src="hero2.png" alt="Iñaki Williams thi đấu trong màu áo Athletic Club" onerror="ph(this)"><div class="hero-number">09</div></div>
+  <div class="hero-photo"><img src="inaki1.png" alt="Iñaki Williams thi đấu trong màu áo Athletic Club" onerror="ph(this)"><div class="hero-number">09</div></div>
 </section>
 
 <div class="strip">
