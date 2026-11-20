@@ -60,8 +60,8 @@ nav .nav-cta.vnx:hover{color:var(--ink)}
 .btn{padding:14px 22px;font-size:12px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;border:1px solid #fff;display:inline-block;transition:.2s;cursor:pointer;background:transparent;color:#fff;line-height:1.3}
 .btn.light{background:#fff;color:var(--red)}
 .btn:hover{transform:translateY(-3px)}
-.hero-photo{height:680px;position:relative;z-index:1;align-self:end}
-.hero-photo img{position:relative;z-index:2;height:100%;width:100%;object-fit:contain;object-position:50% 100%;transform:scale(1.3);transform-origin:50% 100%;filter:drop-shadow(0 18px 28px rgba(0,0,0,.35))}
+.hero-photo{height:640px;position:relative;z-index:1;align-self:end}
+.hero-photo img{position:relative;z-index:2;height:100%;width:100%;object-fit:contain;object-position:50% 100%;filter:drop-shadow(0 18px 28px rgba(0,0,0,.35))}
 .hero-number{position:absolute;z-index:1;left:50%;transform:translateX(-50%);bottom:8%;font:900 clamp(150px,22vw,300px)/.9 var(--head);color:#fff;opacity:.18;pointer-events:none}
 
 .strip{background:#171719;color:#fff;display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding:24px 6vw;text-align:center}
@@ -226,7 +226,7 @@ footer b{color:#fff}footer a{color:#fff;text-decoration:underline}
   .menu{display:block}
   .hero{grid-template-columns:1fr;padding:60px 7vw 0;min-height:0}
   .hero-copy{padding-bottom:10px}
-  .hero-photo{height:480px}.hero-photo img{transform:scale(1.2)}
+  .hero-photo{height:auto;margin:0 -7vw}.hero-photo img{height:auto;width:100%;display:block}
   .hero-number{font-size:120px}
   .strip{grid-template-columns:1fr 1fr;padding:24px 7vw}
   section{padding:75px 7vw}
@@ -239,7 +239,6 @@ footer b{color:#fff}footer a{color:#fff;text-decoration:underline}
 @media(max-width:480px){
   header{height:64px}nav{top:71px}
   .brand{font-size:23px}
-  .hero-photo{height:390px}
   .hero-actions .btn{flex:1;text-align:center;padding:14px 12px}
   .story-img{height:330px}
   .story-text h3{font-size:30px}
